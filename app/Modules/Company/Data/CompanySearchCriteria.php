@@ -2,6 +2,7 @@
 
 namespace App\Modules\Company\Data;
 
+use App\Modules\Company\Enums\CompanyStatus;
 use App\Modules\Company\Enums\CompanyStatusFilter;
 use Spatie\LaravelData\Attributes\MapInputName;
 use Spatie\LaravelData\Attributes\Validation\IntegerType;
@@ -23,10 +24,10 @@ final class CompanySearchCriteria extends Data
         public readonly int $perPage = 15,
     ) {}
 
-    public function statusValue(): ?string
+    public function statusValue(): ?CompanyStatus
     {
         return $this->status === CompanyStatusFilter::All
             ? null
-            : $this->status->value;
+            : CompanyStatus::from($this->status->value);
     }
 }
