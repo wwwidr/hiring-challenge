@@ -1,0 +1,178 @@
+name: Auto-Review Candidate PR
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      contents: read
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Get PR diff
+        id: diff
+        run: |
+          git diff origin/main...HEAD > /tmp/pr_diff.txt
+          echo "diff_size=$(wc -l < /tmp/pr_diff.txt)" >> $GITHUB_OUTPUT
+      
+      - name: Get changed files list
+        id: files
+        run: |
+          git diff --name-only origin/main...HEAD > /tmp/changed_files.txt
+          cat /tmp/changed_files.txt
+      
+      - name: Run PHPUnit tests
+        id: tests
+        continue-on-error: true
+        run: |
+          composer install --no-interaction --prefer-dist 2>/dev/null || echo "composer_failed=true" >> $GITHUB_OUTPUT
+          if [ -f artisan ]; then
+            php artisan config:clear 2>/dev/null
+            php artisan test --parallel 2>&1 | tee /tmp/test_output.txt
+            echo "test_exit_code=$?" >> $GITHUB_OUTPUT
+          else
+            echo "No artisan found, skipping tests"
+            echo "test_exit_code=skip" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Review with Claude
+        id: review
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          # Read all context files
+          CLAUDE_MD=$(cat CLAUDE.md 2>/dev/null || echo "not found")
+          PR_DIFF=$(cat /tmp/pr_diff.txt)
+          CHANGED_FILES=$(cat /tmp/changed_files.txt)
+          TEST_OUTPUT=$(cat /tmp/test_output.txt 2>/dev/null || echo "tests not run")
+          
+          # Determine which ticket was chosen
+          TICKET=""
+          if echo "$CHANGED_FILES" | grep -qi "companysearch\|company.*search\|TICKET.001\|ticket-001"; then
+            TICKET=$(cat tickets/TICKET-001-api-endpoint.md)
+          elif echo "$CHANGED_FILES" | grep -qi "observer\|sequenceobserver\|TICKET.002\|ticket-002\|notify"; then
+            TICKET=$(cat tickets/TICKET-002-observer-bug.md)
+          elif echo "$CHANGED_FILES" | grep -qi "payment.*confirm\|TICKET.003\|ticket-003\|SendPayment"; then
+            TICKET=$(cat tickets/TICKET-003-notification-with-gates.md)
+          fi
+          
+          # Build the review prompt
+          cat > /tmp/review_prompt.json << 'PROMPT_EOF'
+          {
+            "model": "claude-sonnet-4-20250514",
+            "max_tokens": 4000,
+            "messages": [{
+              "role": "user",
+              "content": "You are reviewing a hiring challenge PR for Respaid. Score the candidate 1-10 on each dimension and give a final weighted score.\n\nCLAUDE.md (conventions to follow):\n---\nCLAUDE_MD_PLACEHOLDER\n---\n\nTicket chosen:\n---\nTICKET_PLACEHOLDER\n---\n\nPR Diff:\n---\nDIFF_PLACEHOLDER\n---\n\nChanged files:\n---\nFILES_PLACEHOLDER\n---\n\nTest output:\n---\nTEST_PLACEHOLDER\n---\n\nScore on these dimensions:\n1. Convention adherence (20%) - Did they follow CLAUDE.md? Branch naming, PR template, when() usage, module structure?\n2. Code quality (25%) - Types, error handling, clean code, Laravel patterns, no over-engineering?\n3. Tests (25%) - Coverage of happy path, validation errors, empty results, edge cases?\n4. PR quality (15%) - Description, branch name, commits, clean diff (no composer.lock)?\n5. Big picture awareness (15%) - Did they notice bugs in adjacent code? Did they flag issues beyond their ticket?\n\nRED FLAGS (auto-fail):\n- Didn't follow explicit hints in the ticket (e.g. ticket says use when(), candidate uses if)\n- Recommended something in improvements doc but didn't do it in own code\n- Over-engineered: ticket asked for N files, PR has 3N+ files with new dependencies\n- composer.lock committed\n\nGREEN FLAGS:\n- Used when() as hinted\n- Noticed TICKET-002 bug in SequenceObserver\n- Tests cover edge cases not just happy path\n- Clean diff, minimal files changed\n- declare(strict_types=1) in new files\n\nOutput format:\n## Candidate Review\n\n### Scores\n| Dimension | Score | Notes |\n|---|---|---|\n| Convention adherence (20%) | X/10 | ... |\n| Code quality (25%) | X/10 | ... |\n| Tests (25%) | X/10 | ... |\n| PR quality (15%) | X/10 | ... |\n| Big picture (15%) | X/10 | ... |\n\n### Weighted Score: X.X/10\n\n### Red Flags\n- ...\n\n### Green Flags\n- ...\n\n### Verdict: STRONG HIRE / HIRE / SOFT HIRE / NO HIRE / STRONG NO HIRE\n\n### Summary\n2-3 sentences on the candidate."
+            }]
+          }
+          PROMPT_EOF
+          
+          # Use Python to properly escape and substitute
+          python3 << 'PYEOF'
+          import json, os, subprocess
+          
+          with open('/tmp/review_prompt.json') as f:
+              data = json.load(f)
+          
+          claude_md = open('CLAUDE.md').read()[:3000]
+          
+          ticket = ""
+          changed = open('/tmp/changed_files.txt').read()
+          for t, keywords in [
+              ('tickets/TICKET-001-api-endpoint.md', ['companysearch', 'company', 'search']),
+              ('tickets/TICKET-002-observer-bug.md', ['observer', 'sequence', 'notify']),
+              ('tickets/TICKET-003-notification-with-gates.md', ['payment', 'confirmation', 'sendpayment']),
+          ]:
+              if any(k in changed.lower() for k in keywords):
+                  try:
+                      ticket = open(t).read()
+                  except:
+                      pass
+                  break
+          
+          diff = open('/tmp/pr_diff.txt').read()[:15000]  # Limit diff size
+          test_out = ""
+          try:
+              test_out = open('/tmp/test_output.txt').read()[:3000]
+          except:
+              test_out = "tests not run"
+          
+          content = data['messages'][0]['content']
+          content = content.replace('CLAUDE_MD_PLACEHOLDER', claude_md)
+          content = content.replace('TICKET_PLACEHOLDER', ticket)
+          content = content.replace('DIFF_PLACEHOLDER', diff)
+          content = content.replace('FILES_PLACEHOLDER', changed)
+          content = content.replace('TEST_PLACEHOLDER', test_out)
+          data['messages'][0]['content'] = content
+          
+          with open('/tmp/review_request.json', 'w') as f:
+              json.dump(data, f)
+          
+          result = subprocess.run([
+              'curl', '-s', 'https://api.anthropic.com/v1/messages',
+              '-H', f'x-api-key: {os.environ["ANTHROPIC_API_KEY"]}',
+              '-H', 'content-type: application/json',
+              '-H', 'anthropic-version: 2023-06-01',
+              '-d', '@/tmp/review_request.json'
+          ], capture_output=True, text=True)
+          
+          response = json.loads(result.stdout)
+          review_text = response['content'][0]['text']
+          
+          with open('/tmp/review_result.md', 'w') as f:
+              f.write(review_text)
+          
+          # Extract score for threshold check
+          import re
+          score_match = re.search(r'Weighted Score:\s*(\d+\.?\d*)', review_text)
+          score = float(score_match.group(1)) if score_match else 0
+          
+          with open(os.environ.get('GITHUB_OUTPUT', '/dev/null'), 'a') as f:
+              f.write(f'score={score}\n')
+          
+          print(f"Score: {score}")
+          PYEOF
+      
+      - name: Post review comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const review = fs.readFileSync('/tmp/review_result.md', 'utf8');
+            const score = parseFloat('${{ steps.review.outputs.score }}') || 0;
+            
+            let header = '🤖 **Automated Candidate Review**\n\n';
+            if (score >= 8) {
+              header += '🟢 **Score >= 8/10 — Flagged for JB review**\n\n';
+            } else if (score >= 5) {
+              header += '🟡 **Score 5-8/10 — Manual review recommended**\n\n';
+            } else {
+              header += '🔴 **Score < 5/10 — Auto-decline**\n\n';
+            }
+            
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: header + review
+            });
+      
+      - name: Notify Slack if high score
+        if: steps.review.outputs.score >= 8
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_HIRING_WEBHOOK }}
+        run: |
+          PR_URL="${{ github.event.pull_request.html_url }}"
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          SCORE="${{ steps.review.outputs.score }}"
+          curl -X POST "$SLACK_WEBHOOK" \
+            -H 'Content-type: application/json' \
+            -d "{\"text\":\"🟢 *High-score candidate!* Score: ${SCORE}/10\nPR: ${PR_URL}\nGitHub: ${PR_AUTHOR}\nReview the PR comment for full breakdown.\"}"
