@@ -1,5 +1,7 @@
 # Respaid Hiring Challenge
 
+> **Note:** PRs are automatically reviewed by our AI system. You'll receive a score and detailed feedback as a PR comment within 5 minutes of submitting.
+
 Welcome. This is a simplified version of our Laravel backend for evaluating senior engineering candidates.
 
 ## Setup
