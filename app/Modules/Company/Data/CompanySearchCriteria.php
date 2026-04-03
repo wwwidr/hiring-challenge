@@ -22,4 +22,11 @@ final class CompanySearchCriteria extends Data
         #[IntegerType, Min(1), Max(100), MapInputName('per_page')]
         public readonly int $perPage = 15,
     ) {}
+
+    public function statusValue(): ?string
+    {
+        return $this->status === CompanyStatusFilter::All
+            ? null
+            : $this->status->value;
+    }
 }

@@ -25,10 +25,10 @@ class Company extends Model
         return $query->where('name', 'like', "%{$escaped}%");
     }
 
-    public function scopeWithStatus($query, ?string $status)
+    public function scopeWithStatus($query, CompanyStatus|string|null $status)
     {
         if ($status && $status !== 'all') {
-            return $query->where('status', $status);
+            return $query->where('status', $status instanceof CompanyStatus ? $status->value : $status);
         }
 
         return $query;
