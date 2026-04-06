@@ -9,7 +9,10 @@ class SequenceObserver
 {
     public function updated(Sequence $sequence): void
     {
-        // BUG: This dispatches for ALL sequences, including cancelled ones
+        if ($sequence->isTerminal()) {
+            return;
+        }
+
         NotifySequenceUpdate::dispatch($sequence->id);
     }
 }

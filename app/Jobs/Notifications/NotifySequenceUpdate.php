@@ -20,7 +20,10 @@ class NotifySequenceUpdate implements ShouldQueue
     {
         $sequence = Sequence::findOrFail($this->sequenceId);
 
-        // BUG: No status check here — should skip terminal sequences
+        if ($sequence->isTerminal()) {
+            return;
+        }
+
         Log::info('Sending sequence update notification', [
             'sequence_id' => $sequence->id,
             'status' => $sequence->status,
