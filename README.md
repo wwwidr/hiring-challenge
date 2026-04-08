@@ -15,7 +15,19 @@
 3. Create your OWN private GitHub repo
 4. Push your code with a clean branch: `feat/TICKET-ID-your-name`
 5. Add an `ABOUT.md` file to your repo (template below)
-6. Screen record your entire session
+6. Screen record your entire session **with audio commentary** (see below)
+
+## Screen Recording — Audio Commentary REQUIRED
+
+Your screen recording **must include your voice narration** explaining what you're doing as you work. We don't need video of your face — just your voice over the screen.
+
+**Why we require audio:**
+- Confirms YOU are the one writing the code (not someone else off-camera)
+- Shows how you reason through problems out loud
+- Reveals your decision-making in real-time
+- Filters out scammers using AI tools blindly
+
+**Recordings WITHOUT audio narration will be auto-declined.** No exceptions. We don't need perfect English — just talk through what you're thinking, why you're making decisions, and how you're using AI tools. Tools like Loom, OBS, or QuickTime all support mic recording.
 
 ## ABOUT.md Template (REQUIRED)
 
@@ -50,12 +62,14 @@ Submissions without an `ABOUT.md` are auto-declined. We use this to filter for e
 3. Reply to the job listing on YC Work at a Startup with:
    - Link to your private repo
    - Link to your screen recording (Loom, YouTube unlisted, or asciinema)
+   - **Confirm your recording has audio narration**
 
 ## What We Evaluate
+- **Audio commentary in screen recording** (REQUIRED — no audio = auto-decline)
 - **ABOUT.md quality** - did you fill all 5 sections with substance?
 - Did you follow CLAUDE.md conventions?
 - Did you write tests?
 - Did you check your work before submitting?
 - How do you use AI tools?
 - Your commit quality and cleanliness
-- **Your screen recording (50% of the evaluation)** - we watch HOW you work
+- **Your screen recording (50% of the evaluation)** - we watch HOW you work and listen to HOW you think
