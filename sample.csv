@@ -1,0 +1,51 @@
+row_id,tier,company_name,address,seed_email,seed_phone,category
+1,1,John's Plumbing & Drain Services,"3847 Brunswick Ave, Los Angeles, CA 90039",,,SMB
+2,1,A-1 Total Service Plumbing,"640 S Atlantic Blvd, Los Angeles, CA 90022",,,SMB
+3,1,Elite Auto Body Shop,"2341 Royal Ln Ste C, Dallas, TX 75229",,,SMB
+4,1,Dallas Auto Body Repair,"11055 Harry Hines Blvd A, Dallas, TX 75229",,,SMB
+5,1,M.C. General Landscaping Inc.,"10555 NW 21st Ave, Miami, FL 33147",,,SMB
+6,1,AS4Less Landscaping,"80 SW 8th St Suite 2000, Miami, FL 33130",,,SMB
+7,1,Kedzie Dental Clinic,"6035 N Kedzie Ave, Chicago, IL 60659",,,SMB
+8,1,First Dental Center,"4108 N Sheridan Rd, Chicago, IL 60613",,,SMB
+9,1,Phoenix Roofing & Repair,"301 E Bethany Home Rd A-121, Phoenix, AZ 85012",,,SMB
+10,1,Stonecreek Roofing,"10221 N 32nd St Ste A, Phoenix, AZ 85028",,,SMB
+11,1,Peloton Interactive,"441 9th Ave 6th Fl, New York, NY 10001",,,Mid-Large
+12,1,Warby Parker,"233 Spring St 6th Fl, New York, NY 10013",,,Mid-Large
+13,1,Allbirds,"730 Montgomery St, San Francisco, CA 94111",,,Mid-Large
+14,1,Casper Sleep,"3 World Trade Center, 175 Greenwich St, New York, NY 10007",,,Mid-Large
+15,1,Glossier,"123 Lafayette St, New York, NY 10013",,,Mid-Large
+16,1,Bombas,"28 W 23rd St 9th Fl, New York, NY 10010",,,Mid-Large
+17,1,Brooklinen,"45 Main St, Brooklyn, NY 11201",,,Mid-Large
+18,1,Outdoor Voices,"1400 Lavaca St, Austin, TX 78701",,,Mid-Large
+19,1,Rent the Runway,"10 Jay St, Brooklyn, NY 11201",,,Mid-Large
+20,1,Harry's Inc.,"75 Varick St, New York, NY 10013",,,Mid-Large
+21,2,Pacific Plumbing Team,"10905 Venice Blvd Suite 203, Los Angeles, CA 90034",info@pacificplumbingteam.com,,SMB
+22,2,Rooter Hero Plumbing & Air of Los Angeles,"14401 S Western Ave, Gardena, CA 90249",contact@rooterhero.com,,SMB
+23,2,Harvey's Collision Centers,"4310 Maple Ave, Dallas, TX 75219",info@harveyspaintandbody.com,,SMB
+24,2,Dallas Collision Center,"2964 Irving Blvd, Dallas, TX 75247",contact@dallascollision.com,,SMB
+25,2,Nerak Co. Landscaping,"14145 SW 192nd Ave, Miami, FL 33196",info@miami-landscape.com,,SMB
+26,2,Miami Landscape Lighting Inc.,"3339 Virginia St APT 128, Miami, FL 33133",info@miamilandscapelighting.com,,SMB
+27,2,Downtown Dental - Loop,"25 E Washington St STE 1921, Chicago, IL 60602",contact@downtown-dental.com,,SMB
+28,2,Dental Group of Chicago,"1556 S Michigan Ave APT 200, Chicago, IL 60605",info@dentalgroupofchicago.com,,SMB
+29,2,Lyons Roofing,"878 W Illini St, Phoenix, AZ 85041",info@lyonsroofing.com,,SMB
+30,2,Reimagine Roofing,"1100 E Washington St #200, Phoenix, AZ 85034",contact@reimagineroofing.com,,SMB
+31,2,Dollar Shave Club,"12000 Jefferson Blvd, Culver City, CA 90230",support@dollarshaveclub.com,,Mid-Large
+32,2,Cava Group,"14 Ridge Square NW 5th Fl, Washington, DC 20016",info@cava.com,,Mid-Large
+33,2,Sweetgreen,"3101 W Exposition Blvd, Los Angeles, CA 90018",press@sweetgreen.com,,Mid-Large
+34,2,Chobani,"200 Lafayette St 6th Fl, New York, NY 10012",info@chobani.com,,Mid-Large
+35,2,Magic Spoon,"1732 1st Ave #26807, New York, NY 10128",hello@magicspoon.com,,Mid-Large
+36,2,Olipop,"1111 Broadway, Oakland, CA 94607",hello@drinkolipop.com,,Mid-Large
+37,2,Liquid Death,"14 3rd St, Santa Monica, CA 90401",hello@liquiddeath.com,,Mid-Large
+38,2,Cotopaxi,"3 Triad Center Suite 650, Salt Lake City, UT 84180",info@cotopaxi.com,,Mid-Large
+39,2,Tecovas,"600 Congress Ave 14th Floor, Austin, TX 78701",contact@tecovas.com,,Mid-Large
+40,2,Rothy's,"345 California St 30th Fl, San Francisco, CA 94104",hello@rothys.com,,Mid-Large
+41,3,Red Lilly Plumbing,"1647 Beverly Blvd, Los Angeles, CA 90026",info@redlillyplumbing.com,+1 323-319-4102,SMB
+42,3,Caliber Collision,"3201 Manor Way, Dallas, TX 75235",info@caliber.com,+1 214-352-4041,SMB
+43,3,The Chicago Dental Studio River North,"443 W Huron St, Chicago, IL 60654",info@thechicagodentalstudio.com,+1 312-267-1917,SMB
+44,3,Scott Roofing Company,"24777 N 15th Ave, Phoenix, AZ 85085",info@scottroofingco.com,+1 602-442-7663,SMB
+45,3,Away (JRSK Inc.),"139 5th Ave 3rd Fl, New York, NY 10010",help@awaytravel.com,+1 212-776-1265,Mid-Large
+46,3,Quip,"45 Main St Suite 630, Brooklyn, NY 11201",hello@getquip.com,+1 800-688-2269,Mid-Large
+47,3,Mack Weldon,"4 W 28th St 7th Fl, New York, NY 10001",cs@mackweldon.com,+1 800-475-4355,Mid-Large
+48,3,Vuori,"7750 El Camino Real, Carlsbad, CA 92009",help@vuoriclothing.com,+1 760-602-1640,Mid-Large
+49,3,MeUndies,"5161 Lankershim Blvd Suite 250, North Hollywood, CA 91601",help@meundies.com,+1 855-558-6343,Mid-Large
+50,3,Bombas LLC,"28 W 23rd St 9th Fl, New York, NY 10010",help@bombas.com,+1 866-512-3547,Mid-Large
