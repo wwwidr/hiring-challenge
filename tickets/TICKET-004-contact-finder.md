@@ -1,45 +1,45 @@
-# TICKET-004: Contact Finder — Enterprise Collections
+# TICKET-004: Contact Finder — Zero-Budget Creativity Test
 
-## Context
+## The problem
 
 One of our enterprise clients (a global logistics company) just onboarded with ~1,000 unpaid small-business accounts. For every account we have **only**:
-- `company_name` (string)
-- `mailing_address` (full US postal address)
+- `company_name`
+- `mailing_address`
 
-No owner name, no email, no phone number. We still need to reach the **right decision-maker** (owner, CFO, AP manager, office manager) to drive payment.
+No owner name, no email, no phone. We still need to reach the **right decision-maker** (owner, CFO, AP manager, office manager) to drive payment. Many of these owners are not on LinkedIn and their business has no real web presence.
 
-Apollo / LinkedIn coverage alone is weak here — many owners of these SMBs are not on LinkedIn, and their business has no meaningful web presence beyond a listing page. A single source will not cut it.
+**A single source will never cut it.** That's what we're testing.
 
-## The ticket
+## The ticket (hard constraints)
 
-Build an agent that takes `(company_name, mailing_address)` rows and returns an enriched row with:
+- **30 minutes max.** Including reading this, thinking, coding, and recording.
+- **Zero paid APIs.** No Apollo, no Hunter paid plan, no RocketReach paid, no Clearbit. Free tiers only if they truly don't require a credit card. Use whatever LLM you already pay for personally (Claude, ChatGPT). **No budget from you.**
+- **Stay in the contact-finder scope.** Don't rebuild the world.
+
+Pick **3 realistic US SMB seeds** (plumbing, auto-repair, print shop, small clinic, roofing — whatever). Make up 3 rows of `(company_name, mailing_address)`. For each row, return:
 
 - `contact_name`
 - `contact_role`
-- `contact_email` (primary)
-- `contact_phone` (optional)
-- `confidence_score` (0–100, your own scoring logic)
-- `source_urls` (pipe-separated — every email/phone must be traceable to a real URL)
+- `contact_email_or_phone`
+- `confidence_score` (0-100, your own scoring logic)
+- `source_urls` (pipe-separated — every value must be traceable to a real public URL you can show us)
 
-Rows with confidence `< 70` should be returned with `contact_email=""` and `needs_human_review=true`.
+Rows with confidence `< 70` should be returned with `contact_email_or_phone=""` and `needs_human_review=true`.
 
-## Rules
+## What we actually evaluate
 
-- **~20 minutes of your time.** We already have a production solution — we are evaluating *your approach*, not output volume. 5 rows is enough.
-- **No fake data.** Every email/phone must be traceable to a real source URL.
-- **Use any tools you want.** Apollo, Hunter, Serper, Tavily, Firecrawl, LLM reasoning, Playwright, anything.
-- **Ship a short `NOTES.md`** explaining: your pipeline, why those providers, what you'd do differently with more time, and your `confidence_score` logic.
+- **Source diversity.** How many independent free sources did you combine? Google, Maps listings, state business registries (most are free), Yellow Pages, BBB, Yelp, Instagram/Facebook business pages, WHOIS on the domain, SEC EDGAR (for larger ones), Crunchbase free preview, free-tier Hunter (25/mo), public LinkedIn search without API — anything free and reproducible.
+- **Your confidence logic.** How do you decide 70 vs 80 vs 90?
+- **How you handle the hard rows.** The one where nothing comes back — what's your fallback?
 
-## Data
+## Deliverables
 
-Generate 5 realistic SMB-style seeds yourself (US small businesses — plumbing, print shop, roofing, auto repair, small clinic, etc.). Use `company_name + mailing_address` only. No cheating by picking companies whose owner you already know.
+Private repo with `wwwidr` added as collaborator. Follow the root `README.md` for recording + ABOUT.md rules.
 
-## How to submit
+Ship a short `NOTES.md`:
+1. Your pipeline in 5 bullet points.
+2. Why these free sources and not others.
+3. What you'd add in the next 30 minutes if given them.
+4. Your `confidence_score` formula.
 
-Follow the root `README.md` rules:
-- Private repo with `wwwidr` added as collaborator
-- Screen recording with **audio narration** of the whole session
-- `ABOUT.md` filled with substance
-- Reply to JB's email thread with both links
-
-What we look at most: the *diversity* of sources you use, how you score confidence, and how you reason under uncertainty. A creative pipeline with 3 providers cross-referenced beats a single-API script every time.
+Creative pipelines with 3+ free sources cross-referenced beat any single-API script. That's the whole signal.
