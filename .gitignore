@@ -5,7 +5,6 @@
 /public/storage
 /storage/*.key
 /vendor
-.docs/
 .env
 .env.backup
 .env.production
@@ -19,5 +18,3 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-AGENTS.md
-CLAUDE.md
