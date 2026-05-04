@@ -43,3 +43,13 @@ Two things:
 **1. The double-gate invariant needs a precise definition.** "Status gates must be checked both at the observer level AND inside the job's handle()" is the right rule, but it is ambiguous about which gate each layer owns. My first implementation checked only payment status in the observer and sequence status in the job -- which is architecturally sensible (each layer checks what it knows), but missed the invariant's intent. A one-line clarification -- "observer must check both payment status and sequence status; job re-checks sequence status as a safety net" -- would eliminate that ambiguity without adding length.
 
 **2. Add a "test naming convention" entry.** The existing standards cover structure and logging well, but say nothing about how tests should be named. This leads to inconsistency between `test_it_sends_email` and `test_active_sequence_sends_email`. A single line specifying the pattern (`test_{subject}_{condition}_{outcome}`) would make test suites self-documenting without extra comments.
+
+## Adjacent Issues Noticed (out of scope, flagged for awareness)
+
+While implementing TICKET-003 I read the adjacent notification code and found two related issues:
+
+**1. `SequenceObserver::updated()` dispatches without a terminal status check.**
+`app/Modules/Sequence/Observers/SequenceObserver.php` dispatches `NotifySequenceUpdate` on every `updated` event with no gate. A sequence transitioning to `cancelled` or `recovered` will still enqueue a notification job. This violates the core invariant ("Terminal sequence statuses must never trigger notifications"). The job itself has a `// BUG: No status check here` comment acknowledging this. This is TICKET-002's scope -- not touched here, but flagged.
+
+**2. `NotifySequenceUpdate::handle()` has no safety-net gate.**
+The job has an explicit BUG comment: `// BUG: No status check here — should skip terminal sequences`. Any terminal-sequence job already in the queue before a fix would execute without protection. The pattern implemented in TICKET-003 (observer gate + job safety-net) is the correct fix for this as well.
