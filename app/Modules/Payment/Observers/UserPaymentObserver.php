@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Modules\Payment\Observers;
 
 use App\Jobs\Notifications\SendPaymentConfirmation;
