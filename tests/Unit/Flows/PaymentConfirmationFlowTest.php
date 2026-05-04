@@ -109,4 +109,36 @@ class PaymentConfirmationFlowTest extends TestCase
 
         Queue::assertNotPushed(SendPaymentConfirmation::class);
     }
+
+    public function test_observer_does_not_dispatch_for_completed_payment_on_cancelled_sequence(): void
+    {
+        Queue::fake();
+
+        UserPayment::factory()
+            ->for(Sequence::factory()->cancelled())
+            ->create(['status' => 'completed']);
+
+        Queue::assertNotPushed(SendPaymentConfirmation::class);
+    }
+
+    public function test_job_skips_and_logs_when_recipient_not_configured(): void
+    {
+        Mail::fake();
+        Log::spy();
+
+        config(['mail.payment_confirmation_recipient' => '']);
+
+        $payment = UserPayment::factory()
+            ->for(Sequence::factory())
+            ->create(['status' => 'completed']);
+
+        (new SendPaymentConfirmation($payment->id))->handle();
+
+        Mail::assertNothingSent();
+
+        Log::shouldHaveReceived('info')->withArgs(function (string $message, array $context = []) {
+            return isset($context['payment_id'], $context['sequence_id'], $context['sequence_status'], $context['reason'])
+                && str_contains($context['reason'], 'recipient');
+        });
+    }
 }
