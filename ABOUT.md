@@ -42,7 +42,7 @@ Two things:
 While implementing TICKET-003 I read the adjacent notification code and found two related issues:
 
 **1. `SequenceObserver::updated()` dispatches without a terminal status check.**
-`app/Modules/Sequence/Observers/SequenceObserver.php` dispatches `NotifySequenceUpdate` on every `updated` event with no gate. A sequence transitioning to `cancelled` or `recovered` will still enqueue a notification job, violating the core invariant. The job itself has a `// BUG: No status check here` comment acknowledging this. TICKET-002 scope, not touched here.
+`app/Modules/Sequence/Observers/SequenceObserver.php` dispatches `NotifySequenceUpdate` on every `updated` event with no gate. A sequence transitioning to `cancelled` or `recovered` will still enqueue a notification job, violating the core invariant. The observer itself has a `// BUG: This dispatches for ALL sequences, including cancelled ones` comment acknowledging this. The job has its own separate BUG comment about its missing safety-net gate. TICKET-002 scope, not touched here.
 
 **2. `NotifySequenceUpdate::handle()` has no safety-net gate.**
 The job has an explicit BUG comment: `// BUG: No status check here, should skip terminal sequences`. Any terminal-sequence job already in the queue before a fix would execute without protection. The double-gate pattern implemented in TICKET-003 is the correct fix for this job as well.
