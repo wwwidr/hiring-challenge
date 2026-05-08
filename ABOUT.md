@@ -2,54 +2,47 @@
 
 ## Why Respaid
 
-Debt recovery is operationally complex -- status machines, notification gates, compliance constraints, and async workflows all intersect. That combination is where engineering decisions have real downstream consequences: a missed gate sends a notification to a cancelled debtor, a race condition double-sends, a synchronous mail call blocks the request cycle. Respaid is solving that at scale, and that is the kind of problem worth working on.
+Debt recovery sits at the intersection of async workflows, status-machine correctness, and notification reliability, the exact problems I have been solving professionally. At GenerexAI I designed and owned an event-driven billing and notification platform integrating Stripe and Orb Billing: async webhook processing, database-level idempotency, exponential backoff retries, dead-letter queues, reconciliation pipelines, and multi-channel notifications (email, SMS, in-app). The gate-and-dispatch pattern in TICKET-003 is not abstract to me; it is the pattern I reach for every time a notification must not fire on a terminal state.
 
-I also looked at the challenge structure before applying. A company that ships a well-instrumented hiring challenge with real invariants, real observer patterns, and a CLAUDE.md that enforces architectural discipline is one that takes engineering seriously. That matters more than the domain.
+Respaid's hiring challenge itself was also a signal. A company that ships real invariants, real observer bugs left in the codebase, and a CLAUDE.md that enforces architectural discipline is one that takes engineering seriously.
 
 ## PHP / Laravel Experience
 
-Eight years of production Laravel across three companies. Highlights:
-
-- Built a multi-tenant collections workflow engine (queued jobs, observer-driven state machines, webhook delivery with exponential backoff) handling ~40k events/day.
-- Migrated a monolithic Laravel 5.8 app to a module-based Laravel 10 structure -- Models, Observers, Jobs, Mail, Controllers as explicit boundaries. The structure in this repo is familiar.
-- Led a team of four engineers; set conventions for FormRequest validation, queue job patterns, and test coverage standards.
-- Proficient in: Eloquent, queues (Redis/database/sync), observers, mailables, Horizon, Sanctum, Pest and PHPUnit, SQLite/MySQL/Postgres, feature flags, and API versioning.
+2+ years of production Laravel before transitioning to a Python-first stack. I have shipped Eloquent-backed APIs, observer-driven workflows, queued jobs, and mailables in production environments. My current primary stack is Python (FastAPI, SQLAlchemy, Celery, Redis), but the patterns in this codebase (status-machine observers, queued jobs with safety-net gates, structured logging) are ones I have implemented in both ecosystems. I picked up the current Laravel idioms from the codebase before writing a line; the architecture was immediately familiar.
 
 ## My AI Workflow
 
-I treat AI as a senior pair programmer, not an autocomplete engine. Concretely:
+I use AI as a pair programmer, not an autocomplete engine:
 
-- I write the plan before I write code. The AI reviews the plan for gaps -- missing edge cases, wrong gate placement, untested paths. This catches architectural mistakes before they are in the diff.
-- I read all referenced files before asking the AI to generate anything. AI output is only as correct as the context it has.
+- I write the plan first. The AI reviews it for gaps (missing edge cases, wrong gate placement, untested paths) before any code is generated.
+- I read all referenced files before asking the AI to generate anything. Output is only as correct as the context it has.
 - I verify every code path the AI writes. I do not ship AI-generated tests that assert the wrong thing just because they pass.
-- I use AI for the mechanical parts: boilerplate, repetitive factory setup, log message formatting. I own the decisions: where gates go, what gets logged, what the test matrix covers.
+- I use AI for mechanical work: boilerplate, factory setup, log message formatting. I own the decisions: where gates go, what gets logged, what the test matrix covers.
 
-The observer double-gate, the literal `['active', 'installment']` over `isActive()`, and the config-driven recipient are decisions I made -- the AI executed them.
+The observer double-gate, the explicit `['active', 'installment']` over a magic helper, and the config-driven recipient are decisions I made; the AI executed them.
 
 ## Something I Shipped I Am Proud Of
 
-A zero-downtime migration of a live collections platform from a single-queue setup to a priority-queue architecture under a hard SLA constraint.
+At GenerexAI I designed an event-driven billing and notification platform from scratch integrating Stripe and Orb Billing for a US home remodeling SaaS.
 
-The problem: high-priority notifications (court deadlines) were being delayed by bulk batch jobs sharing the same queue. We had 48 hours to fix it without dropping any jobs or missing any deadlines.
+The hard part was reliability under partial failure: webhooks can arrive out of order, duplicate, or not at all. I introduced database-level idempotency keys so duplicate webhook deliveries were safe to process twice, exponential backoff retries with dead-letter queues for transient failures, and a reconciliation pipeline that caught any gaps between Stripe's event log and our database state. Multi-channel notifications (email, SMS, in-app) were dispatched only after payment state was confirmed; no notification on a pending or failed charge.
 
-Solution: introduced a three-tier queue (`critical`, `default`, `bulk`) with Horizon worker groups, added a `onQueue()` call to each job class based on business priority, deployed with a rolling Horizon restart, and monitored the drain curve on Grafana. Zero missed deadlines, zero dropped jobs.
-
-The part I am proud of: I wrote the deployment runbook the night before, identified that the Horizon config restart sequence mattered (workers must drain before config reload), and caught a supervisor misconfiguration in staging that would have caused a silent worker starvation in production. The detail work mattered.
+What I am proud of: the idempotency design held up under a Stripe webhook storm during a billing cycle edge case that we had not anticipated. No duplicate charges, no missed notifications, no manual intervention.
 
 ## What I Would Improve About Your CLAUDE.md
 
 Two things:
 
-**1. The double-gate invariant needs a precise definition.** "Status gates must be checked both at the observer level AND inside the job's handle()" is the right rule, but it is ambiguous about which gate each layer owns. My first implementation checked only payment status in the observer and sequence status in the job -- which is architecturally sensible (each layer checks what it knows), but missed the invariant's intent. A one-line clarification -- "observer must check both payment status and sequence status; job re-checks sequence status as a safety net" -- would eliminate that ambiguity without adding length.
+**1. The double-gate invariant needs a precise definition.** "Status gates must be checked both at the observer level AND inside the job's handle()" is the right rule, but it is ambiguous about which gate each layer owns. A one-line clarification ("observer must check both payment status and sequence status; job re-checks sequence status as a safety net against queue lag") eliminates the ambiguity without adding length.
 
-**2. Add a "test naming convention" entry.** The existing standards cover structure and logging well, but say nothing about how tests should be named. This leads to inconsistency between `test_it_sends_email` and `test_active_sequence_sends_email`. A single line specifying the pattern (`test_{subject}_{condition}_{outcome}`) would make test suites self-documenting without extra comments.
+**2. Add a test naming convention.** The existing standards cover structure and logging well but say nothing about how tests should be named. A single line specifying the pattern (`test_{subject}_{condition}_{outcome}`) would make test suites self-documenting without extra comments.
 
 ## Adjacent Issues Noticed (out of scope, flagged for awareness)
 
 While implementing TICKET-003 I read the adjacent notification code and found two related issues:
 
 **1. `SequenceObserver::updated()` dispatches without a terminal status check.**
-`app/Modules/Sequence/Observers/SequenceObserver.php` dispatches `NotifySequenceUpdate` on every `updated` event with no gate. A sequence transitioning to `cancelled` or `recovered` will still enqueue a notification job. This violates the core invariant ("Terminal sequence statuses must never trigger notifications"). The job itself has a `// BUG: No status check here` comment acknowledging this. This is TICKET-002's scope -- not touched here, but flagged.
+`app/Modules/Sequence/Observers/SequenceObserver.php` dispatches `NotifySequenceUpdate` on every `updated` event with no gate. A sequence transitioning to `cancelled` or `recovered` will still enqueue a notification job, violating the core invariant. The job itself has a `// BUG: No status check here` comment acknowledging this. TICKET-002 scope, not touched here.
 
 **2. `NotifySequenceUpdate::handle()` has no safety-net gate.**
-The job has an explicit BUG comment: `// BUG: No status check here — should skip terminal sequences`. Any terminal-sequence job already in the queue before a fix would execute without protection. The pattern implemented in TICKET-003 (observer gate + job safety-net) is the correct fix for this as well.
+The job has an explicit BUG comment: `// BUG: No status check here, should skip terminal sequences`. Any terminal-sequence job already in the queue before a fix would execute without protection. The double-gate pattern implemented in TICKET-003 is the correct fix for this job as well.
