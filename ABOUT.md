@@ -28,7 +28,10 @@ At GenerexAI I designed an event-driven billing and notification platform from s
 The hard part was reliability under partial failure: webhooks can arrive out of order, duplicate, or not at all. I introduced database-level idempotency keys so duplicate webhook deliveries were safe to process twice, exponential backoff retries with dead-letter queues for transient failures, and a reconciliation pipeline that caught any gaps between Stripe's event log and our database state. Multi-channel notifications (email, SMS, in-app) were dispatched only after payment state was confirmed; no notification on a pending or failed charge.
 
 What I am proud of: the idempotency design held up under a Stripe webhook storm during a billing cycle edge case that we had not anticipated. No duplicate charges, no missed notifications, no manual intervention.
-
+I have shipped these in the past : 
+<a href="https://ibb.co.com/KxJ01zwP"><img src="https://i.ibb.co.com/Jj9BhFQ1/image.png" alt="image" border="0"></a>
+<a href="https://ibb.co.com/8gSZsLFc"><img src="https://i.ibb.co.com/3mLZd9tz/image.png" alt="image" border="0"></a>
+<a href="https://ibb.co.com/C3RbwwRG"><img src="https://i.ibb.co.com/PvqcrrqH/image.png" alt="image" border="0"></a>
 ## What I Would Improve About Your CLAUDE.md
 
 Two things:
