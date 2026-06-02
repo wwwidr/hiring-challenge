@@ -1,0 +1,71 @@
+{
+  "Cedar Ridge Plumbing LLC": {
+    "registry":   { "name": "Daniel Ortega", "role": "Owner", "source_url": "mock://registry/ne/cedar-ridge-plumbing" },
+    "listing":    { "name": "Daniel Ortega", "phone": "+1-402-555-0148", "source_url": "mock://listing/cedar-ridge-plumbing" },
+    "enrichment": { "email": "d.ortega@cedarridgeplumbing.com", "phone": null, "provider_confidence": 84, "source_url": "mock://enrichment/cedar-ridge-plumbing" }
+  },
+  "Bayview Auto Repair": {
+    "registry":   { "name": "Karen Liu", "role": "Owner", "source_url": "mock://registry/wa/bayview-auto-repair" },
+    "enrichment": { "email": "karen@bayviewauto.com", "phone": "+1-253-555-0192", "provider_confidence": 78, "source_url": "mock://enrichment/bayview-auto-repair" }
+  },
+  "Sunbelt Roofing Co": {
+    "listing":    { "name": null, "phone": "+1-480-555-0133", "source_url": "mock://listing/sunbelt-roofing" },
+    "enrichment": { "email": "office@sunbeltroofingaz.com", "phone": "+1-480-555-0133", "provider_confidence": 66, "source_url": "mock://enrichment/sunbelt-roofing" }
+  },
+  "Riverside Print & Sign": {
+    "enrichment": { "email": "info@riversideprint.biz", "phone": null, "provider_confidence": 41, "source_url": "mock://enrichment/riverside-print-sign" }
+  },
+  "Magnolia Family Dental": {
+    "listing":    { "name": "Dr. Patel", "phone": "+1-478-555-0117", "source_url": "mock://listing/magnolia-family-dental" }
+  },
+  "Northgate HVAC Services": {
+    "registry":   { "name": "Thomas Reed", "role": "Registered Agent", "source_url": "mock://registry/oh/northgate-hvac" }
+  },
+  "Pioneer Landscaping Inc": {
+    "registry":   { "name": "Maria Gomez", "role": "President", "source_url": "mock://registry/id/pioneer-landscaping" },
+    "listing":    { "name": "Maria Gomez", "phone": "+1-208-555-0175", "source_url": "mock://listing/pioneer-landscaping" },
+    "enrichment": { "email": "maria@pioneerlandscaping.com", "phone": "+1-208-555-0175", "provider_confidence": 88, "source_url": "mock://enrichment/pioneer-landscaping" }
+  },
+  "Harbor Light Electric": {
+    "registry":   { "name": "Sean Murphy", "role": "Owner", "source_url": "mock://registry/ma/harbor-light-electric" },
+    "listing":    { "name": "S. Murphy", "phone": "+1-508-555-0160", "source_url": "mock://listing/harbor-light-electric" }
+  },
+  "Summit Pest Control": {
+    "enrichment": { "email": "contact@summitpest.io", "phone": null, "provider_confidence": 38, "source_url": "mock://enrichment/summit-pest-control" }
+  },
+  "Greenfield Catering Group": {
+    "registry":   { "name": "Angela Brooks", "role": "Owner", "source_url": "mock://registry/mo/greenfield-catering" },
+    "enrichment": { "email": "a.brooks@greenfieldcater.com", "phone": "+1-417-555-0151", "provider_confidence": 72, "source_url": "mock://enrichment/greenfield-catering" }
+  },
+  "Lakeside Auto Glass": {
+    "listing":    { "name": "Jeff (manager)", "phone": "+1-608-555-0129", "source_url": "mock://listing/lakeside-auto-glass" },
+    "enrichment": { "email": "jeff@lakesideglass.net", "phone": null, "provider_confidence": 58, "source_url": "mock://enrichment/lakeside-auto-glass" }
+  },
+  "Ironclad Welding Shop": {
+    "registry":   { "name": "Robert Kowalski", "role": "Owner", "source_url": "mock://registry/pa/ironclad-welding" },
+    "listing":    { "name": "Bob Kowalski", "phone": "+1-412-555-0184", "source_url": "mock://listing/ironclad-welding" },
+    "enrichment": { "email": "bob@ironcladweld.com", "phone": "+1-412-555-0184", "provider_confidence": 81, "source_url": "mock://enrichment/ironclad-welding" }
+  },
+  "Coastal Breeze Pool Service": {
+    "registry":   { "name": "Tina Alvarez", "role": "Manager", "source_url": "mock://registry/fl/coastal-breeze-pool" },
+    "listing":    { "name": "Marcus Webb", "phone": "+1-941-555-0146", "source_url": "mock://listing/coastal-breeze-pool" }
+  },
+  "Anchor Marine Supply": {
+    "enrichment": { "email": "sales@anchormarine.co", "phone": "+1-207-555-0138", "provider_confidence": 63, "source_url": "mock://enrichment/anchor-marine" }
+  },
+  "Brookside Veterinary Clinic": {
+    "registry":   { "name": "Dr. Emily Hart", "role": "Owner", "source_url": "mock://registry/tn/brookside-vet" },
+    "listing":    { "name": "Dr. Emily Hart", "phone": "+1-423-555-0109", "source_url": "mock://listing/brookside-vet" },
+    "enrichment": { "email": "emily.hart@brooksidevet.com", "phone": null, "provider_confidence": 86, "source_url": "mock://enrichment/brookside-vet" }
+  },
+  "Maple Leaf Bakery": {
+    "listing":    { "name": null, "phone": "+1-802-555-0121", "source_url": "mock://listing/maple-leaf-bakery" }
+  },
+  "Tidewater Plumbing & Heating": {
+    "registry":   { "name": "George Whitfield", "role": "Owner", "source_url": "mock://registry/va/tidewater-plumbing" },
+    "enrichment": { "email": "g.whitfield@tidewaterph.com", "phone": "+1-757-555-0167", "provider_confidence": 76, "source_url": "mock://enrichment/tidewater-plumbing" }
+  },
+  "Hometown Hardware Co": {
+    "enrichment": { "email": "info@hometownhardware.com", "phone": null, "provider_confidence": 44, "source_url": "mock://enrichment/hometown-hardware" }
+  }
+}

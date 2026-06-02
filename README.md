@@ -1,75 +1,30 @@
-# Respaid Hiring Challenge
+# Respaid / AgentCollect — Hiring Challenge
 
-> **Note:** Your submission is reviewed automatically by our AI system within 24h.
+Welcome. This challenge is **language-agnostic** and **plan-first**. We are not testing whether you know our stack (Laravel + React). We are testing **how you think**: do you plan and ask high-value questions before you build, or do you dive straight into code?
 
-## Setup
-1. Clone this repo (do NOT fork it publicly)
-2. `composer install`
-3. `cp .env.example .env && php artisan key:generate`
-4. `php artisan migrate`
-5. `php artisan test` (should pass)
+> **Use AI tools.** Claude Code, Cursor, Copilot — we expect and want it. We evaluate how you *direct* AI, not whether you use it.
 
-## Your Task
-1. Read `CLAUDE.md` - this is how we work. Follow it.
-2. Pick ONE ticket from the `/tickets` folder
-3. Create your OWN private GitHub repo
-4. Push your code with a clean branch: `feat/TICKET-ID-your-name`
-5. Add an `ABOUT.md` file to your repo (template below)
-6. Screen record your entire session **with audio commentary** (see below)
+## Start here → the Contact Finder challenge
 
-## Screen Recording — Audio Commentary REQUIRED
+Everything is in [`challenge/PROBLEM.md`](challenge/PROBLEM.md). It has two **gated** stages:
 
-Your screen recording **must include your voice narration** explaining what you're doing as you work. We don't need video of your face — just your voice over the screen.
+1. **Stage A — PLAN ONLY** (~20 min): commit a `PLAN.md` (architecture, sources, confidence/provenance/"cannot-verify", privacy, and clarifying questions) **before** you read the clarifications or write solution code. Template: [`challenge/PLAN.template.md`](challenge/PLAN.template.md).
+2. **Stage B — CLARIFY + BUILD**: read [`challenge/CLARIFICATIONS.md`](challenge/CLARIFICATIONS.md), then build a minimal slice against the **mocked providers** in [`challenge/mocks/`](challenge/mocks/). No real scraping.
 
-**Why we require audio:**
-- Confirms YOU are the one writing the code (not someone else off-camera)
-- Shows how you reason through problems out loud
-- Reveals your decision-making in real-time
-- Filters out scammers using AI tools blindly
+Dataset: [`challenge/data/companies.csv`](challenge/data/companies.csv).
 
-**Recordings WITHOUT audio narration will be auto-declined.** No exceptions. We don't need perfect English — just talk through what you're thinking, why you're making decisions, and how you're using AI tools. Tools like Loom, OBS, or QuickTime all support mic recording.
+## How to submit
+- Your own repo (private is fine — add `wwwidr` as a collaborator), with `PLAN.md` committed **first** (git timestamps are part of the signal), then your slice.
+- Process evidence: a screen recording link **or** a clean commit timeline (your choice — async, no webcam required).
+- An `ABOUT.md` at the repo root — template: [`ABOUT.template.md`](ABOUT.template.md).
 
-## ABOUT.md Template (REQUIRED)
+## How we score
+See the rubric in [`challenge/PROBLEM.md`](challenge/PROBLEM.md#how-we-score-so-there-are-no-surprises). In short: plan & judgment 35%, clarifying questions 10%, adaptation 15%, slice 15%, AI-tool direction 15%, communication 10%. **Hard reject** if you dove into code with no plan, or faked precise contacts with no confidence/provenance handling.
 
-Create an `ABOUT.md` at the root of your repo with these 5 sections:
+## Conventions
+[`CLAUDE.md`](CLAUDE.md) shows how we work. You don't need to follow our Laravel conventions for this language-agnostic challenge, but skim it — how we think about conventions matters.
 
-```markdown
-# About Me
+---
 
-## Why Respaid (3 sentences max)
-[Why this role, why now]
-
-## PHP/Laravel experience
-[X years. Be specific about Laravel versions you've shipped to production]
-
-## My AI workflow
-[Which tools you use daily (Claude Code, Cursor, MCP, etc.) and how. 2-3 lines]
-
-## Something I shipped I'm proud of
-[1 paragraph + link or screenshot. Real production work]
-
-## What I'd improve about your CLAUDE.md
-[Optional but strong signal. After reading our CLAUDE.md, what would you change?]
-```
-
-Submissions without an `ABOUT.md` are auto-declined. We use this to filter for engineers who follow instructions.
-
-## How to Submit
-**Do NOT open a PR on this repo.** Your submission must be in a private repo so other candidates cannot see your work.
-
-1. Create a **private** GitHub repo with your solution
-2. Add `wwwidr` as a collaborator (Settings > Collaborators > Add `wwwidr`)
-3. Reply to the job listing on YC Work at a Startup with:
-   - Link to your private repo
-   - Link to your screen recording (Loom, YouTube unlisted, or asciinema)
-   - **Confirm your recording has audio narration**
-
-## What We Evaluate
-- **Audio commentary in screen recording** (REQUIRED — no audio = auto-decline)
-- **ABOUT.md quality** - did you fill all 5 sections with substance?
-- Did you follow CLAUDE.md conventions?
-- Did you write tests?
-- Did you check your work before submitting?
-- How do you use AI tools?
-- Your commit quality and cleanliness
-- **Your screen recording (50% of the evaluation)** - we watch HOW you work and listen to HOW you think
+### Legacy (optional, ignore unless asked)
+The `tickets/` folder + the Laravel sandbox app are from our previous stack-specific challenge. The Contact Finder above is the current challenge. Do not do both.
