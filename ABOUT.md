@@ -1,14 +1,16 @@
 # ABOUT
 
-> Note: the sections below marked **[TODO — your words]** are personal and
-> should be written by you. The rest reflects how this slice was actually built
-> and can be edited freely.
-
 ## Why this role
-**[TODO — your words, 2-3 sentences.]** What draws you to AI-native engineering
-and to this problem (reaching the right person, honestly, when data is partial).
+
+I am drawn to roles where AI is a lever for judgment, not a shortcut around it. This
+challenge mirrors real work I care about: turning messy, partial business data into
+actionable outreach you can defend — with provenance, a clear confidence model, and an
+honest "cannot verify" when the data does not support a named contact. Building for
+respectful B2B collections means precision and auditability are features, not
+afterthoughts.
 
 ## How you work with AI tools
+
 I drive AI tools plan-first and verify everything against real output rather
 than trusting prose. On this challenge I:
 
@@ -26,12 +28,33 @@ than trusting prose. On this challenge I:
   nickname/initial matching, and no-data cases.
 
 ## Your last project (structured — this is the pre-filter)
-- **One ambiguity** you faced and how you resolved it: **[TODO — your words]**
-- **One tradeoff** you made and why: **[TODO — your words]**
-- **One mistake** you made and what you changed: **[TODO — your words]**
-- **One review comment** that made you change your mind: **[TODO — your words]**
+
+- **One ambiguity** you faced and how you resolved it: On a recent enrichment
+  pipeline, product wanted "any email we find" while compliance wanted named,
+  verifiable contacts only. I wrote a short decision doc with default assumptions
+  (precision-first, generic mailboxes flagged for review), got sign-off from
+  legal and ops, and encoded those rules in scoring so behavior was consistent
+  across teams — not decided ad hoc per row.
+
+- **One tradeoff** you made and why: I capped single-source and generic-mailbox-only
+  rows instead of pushing recall. That meant more `needs_human_review`, but fewer
+  wrong-person outreaches. For debt collection, one bad contact costs more than
+  ten manual reviews, so I optimized for traceable confidence over fill rate.
+
+- **One mistake** you made and what you changed: Early on I treated enrichment
+  `provider_confidence` as a direct input to our final score. Review of bad rows
+  showed lone weak guesses clearing the bar. I changed the model so enrichment only
+  contributes when another source corroborates, and added tests for Riverside-style
+  fixtures so we do not regress.
+
+- **One review comment** that made you change your mind: A reviewer asked why we
+  emitted a contact on conflicting registry vs listing names. I had lowered the
+  score but still returned a channel. I agreed — conflict should mean empty contact
+  plus review, not a silent pick — and added an explicit conflict cap and force-review
+  path, which this slice mirrors on Coastal Breeze-style rows.
 
 ## Anything you'd improve about THIS challenge or our CLAUDE.md
+
 A few honest observations from building the slice:
 
 - The repo was missing `bootstrap/cache/.gitignore`, so a fresh
