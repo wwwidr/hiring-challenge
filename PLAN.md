@@ -140,3 +140,14 @@ and a data retention policy for enriched contacts.
 - What changes: If multiple contacts are wanted, I change the output
   to a one-to-many structure and adjust the schema accordingly.
 
+
+## Post-Clarification Adjustments
+
+**Persona priority reordered:** Clarifications specify AP manager first, then owner/founder,
+then CFO, then office manager. My plan assumed owner/CFO above AP manager — updated in
+`PERSONA_PRIORITY` accordingly.
+
+**Confidence threshold:** I assumed 60; clarifications set it at 70. Scoring rubric
+recalibrated — this tightened the verified bucket, which is intentional (precision over recall).
+
+**One contact per company confirmed:** Matches my default assumption. No schema change needed.
