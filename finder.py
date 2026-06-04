@@ -46,3 +46,29 @@ def get_role_score(role):
         if key in role_lowered:
             return ROLE_PRIORITY[key]
     return 0
+
+def names_are_same_person(name_one, name_two):
+    # Handles cases like "S. Murphy" vs "Sean Murphy"
+    # If last names match and first initials match, treat as same person
+    if name_one is None or name_two is None:
+        return False
+
+    cleaned_one = name_one.lower().replace(".", "").strip()
+    cleaned_two = name_two.lower().replace(".", "").strip()
+
+    if cleaned_one == cleaned_two:
+        return True
+
+    parts_one = cleaned_one.split()
+    parts_two = cleaned_two.split()
+
+    if len(parts_one) < 2 or len(parts_two) < 2:
+        return False
+
+    last_names_match = parts_one[-1] == parts_two[-1]
+    first_initials_match = parts_one[0][0] == parts_two[0][0]
+
+    if last_names_match and first_initials_match:
+        return True
+
+    return False
