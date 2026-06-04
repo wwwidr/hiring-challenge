@@ -63,14 +63,15 @@ False-failure guards (do NOT penalize): inspecting data before opening AI; decli
 real PII into a model (data is synthetic, but the instinct is fine); thinking silently / typing
 instead of speaking; using pandas/Excel first; using a non-Claude AI tool; non-native English.
 
-## Compliance (REQUIRED before this goes live — it is a selection procedure)
+## Dataset + light compliance (JB decision 2026-06-04: drop the heavy consent text)
 
-- Explicit written **consent** before recording + AI analysis: state what's recorded, who sees it,
-  retention period, deletion rights, and that AI scores it.
-- **No webcam** required. Offer an **accommodation / alternate-format** path.
-- Synthetic dataset only; warn candidates not to expose personal accounts, API keys, or private tabs.
+- **Dataset = real publicly-listed companies** (name + public business address, the kind anyone can
+  find publicly) plus synthetic missing fields / planted-trap enrichment rows. No personal/private
+  data in the challenge data, so no data-privacy burden on the candidate side.
+- **No webcam** required (screen only). Offer an **accommodation / alternate-format** path on request.
+- Warn candidates not to expose THEIR OWN personal accounts, API keys, or private tabs while recording.
 - **Automation triages only — never auto-rejects.** Bot transcribes + first-pass scores the 5 axes;
-  a human reviews all low/mid scores. Track pass rates for adverse impact where lawful.
-- Jurisdiction flags: NYC AEDT (notice + bias audit + public summary for NYC roles), Illinois AI
-  Video Interview Act (notice/consent/deletion if analyzing video for IL roles), EEOC selection-
-  procedure + AI-disability guidance. Confirm coverage before enabling auto-scoring on real candidates.
+  a human reviews all low/mid before any decision.
+- Consent text intentionally dropped (JB call): we're a small startup, dataset is public, triage is
+  human-final. NOTE (non-blocking): IF you ever hire specifically for NYC or Illinois roles, the
+  recording-AI-analysis rules (NYC AEDT, Illinois AI Video Act) can re-apply — revisit then, not now.
