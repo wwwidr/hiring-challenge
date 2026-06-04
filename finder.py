@@ -174,3 +174,62 @@ def build_contact_row(company_name, mock_data):
         "source": " | ".join(source_urls),
         "needs_human_review": needs_human_review,
     }
+    
+    
+
+def write_output(filepath, rows):
+    fieldnames = [
+        "company_name", "mailing_address", "contact_name", "contact_role",
+        "contact_email_or_phone", "confidence_score", "source", "needs_human_review"
+    ]
+    with open(filepath, "w", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames=fieldnames)
+        writer.writeheader()
+        for row in rows:
+            writer.writerow(row)
+
+
+def main():
+    logger.info("Starting contact finder")
+
+    companies = read_csv("challenge/data/companies.csv")
+    mock_data = read_json("challenge/mocks/enrichment_responses.json")
+
+    logger.info(f"Loaded {len(companies)} companies")
+
+    output_rows = []
+
+    for company in companies:
+        company_name = company["company_name"]
+        mailing_address = company["mailing_address"]
+
+        company_mock_data = mock_data.get(company_name, None)
+
+        if company_mock_data is None:
+            logger.warning(f"{company_name} -- no mock data found, cannot verify")
+            row = {
+                "company_name": company_name,
+                "mailing_address": mailing_address,
+                "contact_name": "",
+                "contact_role": "",
+                "contact_email_or_phone": "",
+                "confidence_score": 0,
+                "source": "",
+                "needs_human_review": True,
+            }
+        else:
+            contact = build_contact_row(company_name, company_mock_data)
+            row = {
+                "company_name": company_name,
+                "mailing_address": mailing_address,
+            }
+            for key in contact:
+                row[key] = contact[key]
+
+        output_rows.append(row)
+
+    write_output("output/contacts.csv", output_rows)
+    logger.info(f"Done. Written {len(output_rows)} rows to output/contacts.csv")
+
+
+main()
