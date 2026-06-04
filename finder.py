@@ -19,9 +19,6 @@ def read_json(filepath):
     with open(filepath) as file:
         return json.load(file)
 
-companies = read_csv("challenge/data/companies.csv")
-mock_data = read_json("challenge/mocks/enrichment_responses.json")
-logger.info(f"Loaded {len(companies)} companies")
 
 # Priority order taken directly from clarifications doc
 # AP manager is highest because we are chasing payment, not general outreach
