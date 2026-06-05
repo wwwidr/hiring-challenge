@@ -1,7 +1,5 @@
 # NOTES.md
 
-A bit about how the slice works and what I'd do next. Reference for you to type from — say it in your own words.
-
 ## Pipeline
 
 - Read the company CSV and the mock provider JSON. For each company, pull whatever the three providers returned (registry, listing, enrichment) — any of them can be missing or have null fields.
