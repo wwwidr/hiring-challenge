@@ -1,0 +1,31 @@
+company_name,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review,cannot_verify_reason
+Cedar Ridge Plumbing LLC,Daniel Ortega,Owner/President,d.ortega@cedarridgeplumbing.com,88,registry|listing|enrichment,false,
+Bayview Auto Repair,Karen Liu,Owner/President,,48,registry|enrichment,true,Confidence 48 below threshold 70
+Sunbelt Roofing Co,,,,17,enrichment,true,Confidence 17 below threshold 70
+Riverside Print & Sign,,,,14,enrichment,true,Confidence 14 below threshold 70
+Magnolia Family Dental,Dr. Patel,,,15,listing,true,Confidence 15 below threshold 70
+Northgate HVAC Services,Thomas Reed,Registered Agent,,11,registry,true,No attributable contact value
+Pioneer Landscaping Inc,Maria Gomez,Owner/President,maria@pioneerlandscaping.com,89,registry|listing|enrichment,false,
+Harbor Light Electric,Sean Murphy,Owner/President,+1-508-555-0160,75,registry|listing,false,
+Summit Pest Control,,,,14,enrichment,true,Confidence 14 below threshold 70
+Greenfield Catering Group,Angela Brooks,Owner/President,,47,registry|enrichment,true,Confidence 47 below threshold 70
+Lakeside Auto Glass,Jeff (manager),,,26,listing|enrichment,true,Confidence 26 below threshold 70
+Ironclad Welding Shop,Robert Kowalski,Owner/President,bob@ironcladweld.com,78,registry|listing|enrichment,false,
+Coastal Breeze Pool Service,Tina Alvarez,Manager,,29,registry|listing,true,Sources name different people
+Redwood Cabinetry,,,,0,,true,Company not found in provider data
+Anchor Marine Supply,,,,16,enrichment,true,Confidence 16 below threshold 70
+Desert Sky Solar,,,,0,,true,Company not found in provider data
+Brookside Veterinary Clinic,Dr. Emily Hart,Owner/President,emily.hart@brooksidevet.com,89,registry|listing|enrichment,false,
+Cornerstone Masonry,,,,0,,true,Company not found in provider data
+Velvet Thread Tailoring,,,,0,,true,Company not found in provider data
+Frontier Towing & Recovery,,,,0,,true,Company not found in provider data
+Blue Heron Landscaping,,,,0,,true,Company not found in provider data
+Ace Mobile Locksmith,,,,0,,true,Company not found in provider data
+Maple Leaf Bakery,,,,15,listing,true,Confidence 15 below threshold 70
+Granite Peak Surveying,,,,0,,true,Company not found in provider data
+Tidewater Plumbing & Heating,George Whitfield,Owner/President,,48,registry|enrichment,true,Confidence 48 below threshold 70
+Sierra Vista Auto Body,,,,0,,true,Company not found in provider data
+Hometown Hardware Co,,,,14,enrichment,true,Confidence 14 below threshold 70
+Evergreen Tree Care,,,,0,,true,Company not found in provider data
+Liberty Sign & Awning,,,,0,,true,Company not found in provider data
+Crescent Moon Cafe,,,,0,,true,Company not found in provider data
