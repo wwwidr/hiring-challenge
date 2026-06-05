@@ -55,3 +55,9 @@ No real scraping involved, it's all mocks, but i'd still like it to hold up.
    - Why it matters: The could have a nickname and intial that are the same person, there could be a case where two sources are basically different people, and registered agents who aren't the actual contact. So I need to decide how much to trust the name matching vs the role matching.
    - Default assumption: I'll match names pretty loosely, allowing for initials, nicknames, and minor variations, as long as the last name matches. Different names are obviously a conflict. But for registed agents and roleless contacts, I'll push them lower than actual owners and AP people.
    - What changes if answered: If you want to be really cautious, I can require a pretty close name match and a strong role to consider it a match. If you want to be more lenient, I can allow for looser name matching and give more weight to the role, even if the name is different.
+
+## Post-clarification adjustments (I did this after reading CLARIFICATIONS.md)
+- Threshold is 70
+- Role priority locked: AP manager / accounts payable > owner / founder for small businesses > CFO / finance lead for larger ones > office manager as a fallback. So i will reorder my candidate selection to reflect this.
+- "Precision over recall" is the principle, so I will be more cautious and require stronger signals to consider something a match or to give it a high confidence score. I will also make sure to provide clear information to the human reviewer so they can make an informed decision.
+- My first question is partially answered by the principle of "precision over recall", so I will also assume that a wrong contact is worse than a missing contact.
