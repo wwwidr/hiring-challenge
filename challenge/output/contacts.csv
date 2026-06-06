@@ -1,0 +1,31 @@
+company_name,mailing_address,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review
+Cedar Ridge Plumbing LLC,"4821 Maple Ave, Lincoln, NE 68504",Daniel Ortega,Owner,d.ortega@cedarridgeplumbing.com,95,mock://registry/ne/cedar-ridge-plumbing|mock://listing/cedar-ridge-plumbing|mock://enrichment/cedar-ridge-plumbing,False
+Bayview Auto Repair,"129 Harbor St, Tacoma, WA 98402",Karen Liu,Owner,karen@bayviewauto.com,75,mock://registry/wa/bayview-auto-repair|mock://enrichment/bayview-auto-repair,False
+Sunbelt Roofing Co,"7714 Desert Bloom Rd, Mesa, AZ 85207",,,,20,mock://enrichment/sunbelt-roofing,True
+Riverside Print & Sign,"302 W 3rd St, Davenport, IA 52801",,,,5,mock://enrichment/riverside-print-sign,True
+Magnolia Family Dental,"1188 Peachtree Ln, Macon, GA 31201",Dr. Patel,,,0,mock://listing/magnolia-family-dental,True
+Northgate HVAC Services,"56 Industrial Pkwy, Akron, OH 44310",Thomas Reed,Registered Agent,,0,mock://registry/oh/northgate-hvac,True
+Pioneer Landscaping Inc,"940 Prairie View Dr, Boise, ID 83704",Maria Gomez,President,maria@pioneerlandscaping.com,95,mock://registry/id/pioneer-landscaping|mock://listing/pioneer-landscaping|mock://enrichment/pioneer-landscaping,False
+Harbor Light Electric,"22 Dockside Ave, New Bedford, MA 02740",Sean Murphy,Owner,,65,mock://registry/ma/harbor-light-electric|mock://listing/harbor-light-electric,True
+Summit Pest Control,"6310 Highland Blvd, Reno, NV 89506",,,,5,mock://enrichment/summit-pest-control,True
+Greenfield Catering Group,"415 Orchard St, Springfield, MO 65806",Angela Brooks,Owner,,65,mock://registry/mo/greenfield-catering|mock://enrichment/greenfield-catering,True
+Lakeside Auto Glass,"88 Lakeshore Dr, Madison, WI 53703",Jeff,manager,,20,mock://listing/lakeside-auto-glass|mock://enrichment/lakeside-auto-glass,True
+Ironclad Welding Shop,"1701 Foundry Rd, Pittsburgh, PA 15201",Robert Kowalski,Owner,bob@ironcladweld.com,95,mock://registry/pa/ironclad-welding|mock://listing/ironclad-welding|mock://enrichment/ironclad-welding,False
+Coastal Breeze Pool Service,"233 Seagrape Way, Sarasota, FL 34236",Tina Alvarez,Manager,,35,mock://registry/fl/coastal-breeze-pool|mock://listing/coastal-breeze-pool,True
+Redwood Cabinetry,"509 Timber Ct, Eugene, OR 97401",,,,0,,True
+Anchor Marine Supply,"17 Wharf St, Portland, ME 04101",,,,5,mock://enrichment/anchor-marine,True
+Desert Sky Solar,"4400 Sunray Dr, Tucson, AZ 85706",,,,0,,True
+Brookside Veterinary Clinic,"760 Willow Bend, Chattanooga, TN 37402",Dr. Emily Hart,Owner,emily.hart@brooksidevet.com,95,mock://registry/tn/brookside-vet|mock://listing/brookside-vet|mock://enrichment/brookside-vet,False
+Cornerstone Masonry,"311 Brickyard Ln, Wichita, KS 67202",,,,0,,True
+Velvet Thread Tailoring,"55 Garment Row, Allentown, PA 18101",,,,0,,True
+Frontier Towing & Recovery,"9201 Range Rd, Cheyenne, WY 82001",,,,0,,True
+Blue Heron Landscaping,"144 Marsh View Dr, Charleston, SC 29401",,,,0,,True
+Ace Mobile Locksmith,"27 Keystone Ave, Toledo, OH 43604",,,,0,,True
+Maple Leaf Bakery,"612 Baker St, Burlington, VT 05401",,,,0,mock://listing/maple-leaf-bakery,True
+Granite Peak Surveying,"800 Summit Rd, Helena, MT 59601",,,,0,,True
+Tidewater Plumbing & Heating,"45 Estuary Ln, Norfolk, VA 23510",George Whitfield,Owner,g.whitfield@tidewaterph.com,75,mock://registry/va/tidewater-plumbing|mock://enrichment/tidewater-plumbing,False
+Sierra Vista Auto Body,"3320 Foothill Dr, Fresno, CA 93720",,,,0,,True
+Hometown Hardware Co,"19 Main St, Dubuque, IA 52001",,,,5,mock://enrichment/hometown-hardware,True
+Evergreen Tree Care,"507 Cedar Hollow, Spokane, WA 99201",,,,0,,True
+Liberty Sign & Awning,"1290 Freedom Blvd, Allen, TX 75002",,,,0,,True
+Crescent Moon Cafe,"73 Bourbon Walk, Lafayette, LA 70501",,,,0,,True
