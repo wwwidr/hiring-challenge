@@ -1,0 +1,1 @@
+The dataset for this challenge is `sample_invoices.xlsx` (25 anonymized real rows). It is provided to you when the challenge is sent. If you don't have it, reply to the email that sent you here.
