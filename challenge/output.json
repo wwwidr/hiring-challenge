@@ -1,0 +1,272 @@
+[
+  {
+    "contact_name": "Daniel Ortega",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "d.ortega@cedarridgeplumbing.com",
+    "confidence_score": 100,
+    "source": "mock://registry/ne/cedar-ridge-plumbing, mock://listing/cedar-ridge-plumbing, mock://enrichment/cedar-ridge-plumbing",
+    "needs_human_review": false,
+    "company_name": "Cedar Ridge Plumbing LLC"
+  },
+  {
+    "contact_name": "Karen Liu",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "karen@bayviewauto.com",
+    "confidence_score": 100,
+    "source": "mock://registry/wa/bayview-auto-repair, mock://enrichment/bayview-auto-repair",
+    "needs_human_review": false,
+    "company_name": "Bayview Auto Repair"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "office@sunbeltroofingaz.com",
+    "confidence_score": 81,
+    "source": "mock://listing/sunbelt-roofing, mock://enrichment/sunbelt-roofing",
+    "needs_human_review": false,
+    "company_name": "Sunbelt Roofing Co"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 41,
+    "source": "mock://enrichment/riverside-print-sign",
+    "needs_human_review": true,
+    "company_name": "Riverside Print & Sign"
+  },
+  {
+    "contact_name": "Dr. Patel",
+    "contact_role": "Contact",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "mock://listing/magnolia-family-dental",
+    "needs_human_review": true,
+    "company_name": "Magnolia Family Dental"
+  },
+  {
+    "contact_name": "Thomas Reed",
+    "contact_role": "Registered Agent",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "mock://registry/oh/northgate-hvac",
+    "needs_human_review": true,
+    "company_name": "Northgate HVAC Services"
+  },
+  {
+    "contact_name": "Maria Gomez",
+    "contact_role": "President",
+    "contact_email_or_phone": "maria@pioneerlandscaping.com",
+    "confidence_score": 100,
+    "source": "mock://registry/id/pioneer-landscaping, mock://listing/pioneer-landscaping, mock://enrichment/pioneer-landscaping",
+    "needs_human_review": false,
+    "company_name": "Pioneer Landscaping Inc"
+  },
+  {
+    "contact_name": "Sean Murphy",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "",
+    "confidence_score": 15,
+    "source": "mock://registry/ma/harbor-light-electric, mock://listing/harbor-light-electric",
+    "needs_human_review": true,
+    "company_name": "Harbor Light Electric"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 38,
+    "source": "mock://enrichment/summit-pest-control",
+    "needs_human_review": true,
+    "company_name": "Summit Pest Control"
+  },
+  {
+    "contact_name": "Angela Brooks",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "a.brooks@greenfieldcater.com",
+    "confidence_score": 97,
+    "source": "mock://registry/mo/greenfield-catering, mock://enrichment/greenfield-catering",
+    "needs_human_review": false,
+    "company_name": "Greenfield Catering Group"
+  },
+  {
+    "contact_name": "Jeff (manager)",
+    "contact_role": "Contact",
+    "contact_email_or_phone": "jeff@lakesideglass.net",
+    "confidence_score": 83,
+    "source": "mock://listing/lakeside-auto-glass, mock://enrichment/lakeside-auto-glass",
+    "needs_human_review": false,
+    "company_name": "Lakeside Auto Glass"
+  },
+  {
+    "contact_name": "Robert Kowalski",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "bob@ironcladweld.com",
+    "confidence_score": 100,
+    "source": "mock://registry/pa/ironclad-welding, mock://listing/ironclad-welding, mock://enrichment/ironclad-welding",
+    "needs_human_review": false,
+    "company_name": "Ironclad Welding Shop"
+  },
+  {
+    "contact_name": "Tina Alvarez",
+    "contact_role": "Manager",
+    "contact_email_or_phone": "",
+    "confidence_score": 15,
+    "source": "mock://registry/fl/coastal-breeze-pool, mock://listing/coastal-breeze-pool",
+    "needs_human_review": true,
+    "company_name": "Coastal Breeze Pool Service"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Redwood Cabinetry"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 63,
+    "source": "mock://enrichment/anchor-marine",
+    "needs_human_review": true,
+    "company_name": "Anchor Marine Supply"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Desert Sky Solar"
+  },
+  {
+    "contact_name": "Dr. Emily Hart",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "emily.hart@brooksidevet.com",
+    "confidence_score": 100,
+    "source": "mock://registry/tn/brookside-vet, mock://listing/brookside-vet, mock://enrichment/brookside-vet",
+    "needs_human_review": false,
+    "company_name": "Brookside Veterinary Clinic"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Cornerstone Masonry"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Velvet Thread Tailoring"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Frontier Towing & Recovery"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Blue Heron Landscaping"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Ace Mobile Locksmith"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "mock://listing/maple-leaf-bakery",
+    "needs_human_review": true,
+    "company_name": "Maple Leaf Bakery"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Granite Peak Surveying"
+  },
+  {
+    "contact_name": "George Whitfield",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "g.whitfield@tidewaterph.com",
+    "confidence_score": 100,
+    "source": "mock://registry/va/tidewater-plumbing, mock://enrichment/tidewater-plumbing",
+    "needs_human_review": false,
+    "company_name": "Tidewater Plumbing & Heating"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Sierra Vista Auto Body"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 44,
+    "source": "mock://enrichment/hometown-hardware",
+    "needs_human_review": true,
+    "company_name": "Hometown Hardware Co"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Evergreen Tree Care"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Liberty Sign & Awning"
+  },
+  {
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "company_name": "Crescent Moon Cafe"
+  }
+]

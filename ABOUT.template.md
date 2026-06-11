@@ -8,6 +8,7 @@ Keep it short and concrete. We read this to understand how you think, not to gra
 ## How you work with AI tools
 <!-- Which tools, and HOW you direct them (not "I use AI" — show judgment: when you trust the model vs override it). -->
 
+
 ## Your last project (structured — this is the pre-filter)
 - **One ambiguity** you faced and how you resolved it:
 - **One tradeoff** you made and why:
