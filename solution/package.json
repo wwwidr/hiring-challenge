@@ -1,0 +1,14 @@
+{
+  "name": "contact-finder",
+  "version": "1.0.0",
+  "description": "Contact Finder – Stage B slice against mocked providers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test tests/resolver.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
