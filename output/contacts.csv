@@ -1,0 +1,31 @@
+company_name,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review
+Cedar Ridge Plumbing LLC,Daniel Ortega,Owner,d.ortega@cedarridgeplumbing.com,100,mock://enrichment/cedar-ridge-plumbing | mock://registry/ne/cedar-ridge-plumbing | mock://listing/cedar-ridge-plumbing,false
+Bayview Auto Repair,Karen Liu,Owner,karen@bayviewauto.com,80,mock://enrichment/bayview-auto-repair | mock://registry/wa/bayview-auto-repair,false
+Sunbelt Roofing Co,,,,50,mock://enrichment/sunbelt-roofing | mock://listing/sunbelt-roofing,true
+Riverside Print & Sign,,,,10,mock://enrichment/riverside-print-sign,true
+Magnolia Family Dental,Dr. Patel,Business Contact,,15,mock://listing/magnolia-family-dental,true
+Northgate HVAC Services,Thomas Reed,Registered Agent,,40,mock://registry/oh/northgate-hvac,true
+Pioneer Landscaping Inc,Maria Gomez,President,maria@pioneerlandscaping.com,100,mock://enrichment/pioneer-landscaping | mock://registry/id/pioneer-landscaping | mock://listing/pioneer-landscaping,false
+Harbor Light Electric,Sean Murphy,Owner,,60,mock://listing/harbor-light-electric | mock://registry/ma/harbor-light-electric,true
+Summit Pest Control,,,,10,mock://enrichment/summit-pest-control,true
+Greenfield Catering Group,Angela Brooks,Owner,a.brooks@greenfieldcater.com,80,mock://enrichment/greenfield-catering | mock://registry/mo/greenfield-catering,false
+Lakeside Auto Glass,Jeff (manager),Business Contact,,40,mock://enrichment/lakeside-auto-glass | mock://listing/lakeside-auto-glass,true
+Ironclad Welding Shop,Robert Kowalski,Owner,bob@ironcladweld.com,100,mock://enrichment/ironclad-welding | mock://registry/pa/ironclad-welding | mock://listing/ironclad-welding,false
+Coastal Breeze Pool Service,Tina Alvarez,Manager,,60,mock://listing/coastal-breeze-pool | mock://registry/fl/coastal-breeze-pool,true
+Redwood Cabinetry,,,,0,not_found,true
+Anchor Marine Supply,,,,20,mock://enrichment/anchor-marine,true
+Desert Sky Solar,,,,0,not_found,true
+Brookside Veterinary Clinic,Dr. Emily Hart,Owner,emily.hart@brooksidevet.com,100,mock://enrichment/brookside-vet | mock://registry/tn/brookside-vet | mock://listing/brookside-vet,false
+Cornerstone Masonry,,,,0,not_found,true
+Velvet Thread Tailoring,,,,0,not_found,true
+Frontier Towing & Recovery,,,,0,not_found,true
+Blue Heron Landscaping,,,,0,not_found,true
+Ace Mobile Locksmith,,,,0,not_found,true
+Maple Leaf Bakery,,,,15,mock://listing/maple-leaf-bakery,true
+Granite Peak Surveying,,,,0,not_found,true
+Tidewater Plumbing & Heating,George Whitfield,Owner,g.whitfield@tidewaterph.com,80,mock://enrichment/tidewater-plumbing | mock://registry/va/tidewater-plumbing,false
+Sierra Vista Auto Body,,,,0,not_found,true
+Hometown Hardware Co,,,,10,mock://enrichment/hometown-hardware,true
+Evergreen Tree Care,,,,0,not_found,true
+Liberty Sign & Awning,,,,0,not_found,true
+Crescent Moon Cafe,,,,0,not_found,true
