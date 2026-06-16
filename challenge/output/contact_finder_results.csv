@@ -1,0 +1,31 @@
+company_name,mailing_address,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review
+"Cedar Ridge Plumbing LLC","4821 Maple Ave, Lincoln, NE 68504","Daniel Ortega",Owner,d.ortega@cedarridgeplumbing.com,100,"registry:mock://registry/ne/cedar-ridge-plumbing; listing:mock://listing/cedar-ridge-plumbing; enrichment:mock://enrichment/cedar-ridge-plumbing",false
+"Bayview Auto Repair","129 Harbor St, Tacoma, WA 98402","Karen Liu",Owner,karen@bayviewauto.com,95,"registry:mock://registry/wa/bayview-auto-repair; enrichment:mock://enrichment/bayview-auto-repair",false
+"Sunbelt Roofing Co","7714 Desert Bloom Rd, Mesa, AZ 85207",,,,35,"listing:mock://listing/sunbelt-roofing; enrichment:mock://enrichment/sunbelt-roofing",true
+"Riverside Print & Sign","302 W 3rd St, Davenport, IA 52801",,,,0,enrichment:mock://enrichment/riverside-print-sign,true
+"Magnolia Family Dental","1188 Peachtree Ln, Macon, GA 31201",,,,10,listing:mock://listing/magnolia-family-dental,true
+"Northgate HVAC Services","56 Industrial Pkwy, Akron, OH 44310",,,,0,registry:mock://registry/oh/northgate-hvac,true
+"Pioneer Landscaping Inc","940 Prairie View Dr, Boise, ID 83704","Maria Gomez",Owner,maria@pioneerlandscaping.com,100,"registry:mock://registry/id/pioneer-landscaping; listing:mock://listing/pioneer-landscaping; enrichment:mock://enrichment/pioneer-landscaping",false
+"Harbor Light Electric","22 Dockside Ave, New Bedford, MA 02740","Sean Murphy",Owner,+1-508-555-0160,76,"registry:mock://registry/ma/harbor-light-electric; listing:mock://listing/harbor-light-electric",false
+"Summit Pest Control","6310 Highland Blvd, Reno, NV 89506",,,,0,enrichment:mock://enrichment/summit-pest-control,true
+"Greenfield Catering Group","415 Orchard St, Springfield, MO 65806","Angela Brooks",Owner,a.brooks@greenfieldcater.com,95,"registry:mock://registry/mo/greenfield-catering; enrichment:mock://enrichment/greenfield-catering",false
+"Lakeside Auto Glass","88 Lakeshore Dr, Madison, WI 53703",,,,61,"listing:mock://listing/lakeside-auto-glass; enrichment:mock://enrichment/lakeside-auto-glass",true
+"Ironclad Welding Shop","1701 Foundry Rd, Pittsburgh, PA 15201","Robert Kowalski",Owner,bob@ironcladweld.com,100,"registry:mock://registry/pa/ironclad-welding; listing:mock://listing/ironclad-welding; enrichment:mock://enrichment/ironclad-welding",false
+"Coastal Breeze Pool Service","233 Seagrape Way, Sarasota, FL 34236",,,,33,"registry:mock://registry/fl/coastal-breeze-pool; listing:mock://listing/coastal-breeze-pool",true
+"Redwood Cabinetry","509 Timber Ct, Eugene, OR 97401",,,,0,,true
+"Anchor Marine Supply","17 Wharf St, Portland, ME 04101",,,,0,enrichment:mock://enrichment/anchor-marine,true
+"Desert Sky Solar","4400 Sunray Dr, Tucson, AZ 85706",,,,0,,true
+"Brookside Veterinary Clinic","760 Willow Bend, Chattanooga, TN 37402","Dr. Emily Hart",Owner,emily.hart@brooksidevet.com,100,"registry:mock://registry/tn/brookside-vet; listing:mock://listing/brookside-vet; enrichment:mock://enrichment/brookside-vet",false
+"Cornerstone Masonry","311 Brickyard Ln, Wichita, KS 67202",,,,0,,true
+"Velvet Thread Tailoring","55 Garment Row, Allentown, PA 18101",,,,0,,true
+"Frontier Towing & Recovery","9201 Range Rd, Cheyenne, WY 82001",,,,0,,true
+"Blue Heron Landscaping","144 Marsh View Dr, Charleston, SC 29401",,,,0,,true
+"Ace Mobile Locksmith","27 Keystone Ave, Toledo, OH 43604",,,,0,,true
+"Maple Leaf Bakery","612 Baker St, Burlington, VT 05401",,,,0,listing:mock://listing/maple-leaf-bakery,true
+"Granite Peak Surveying","800 Summit Rd, Helena, MT 59601",,,,0,,true
+"Tidewater Plumbing & Heating","45 Estuary Ln, Norfolk, VA 23510","George Whitfield",Owner,g.whitfield@tidewaterph.com,95,"registry:mock://registry/va/tidewater-plumbing; enrichment:mock://enrichment/tidewater-plumbing",false
+"Sierra Vista Auto Body","3320 Foothill Dr, Fresno, CA 93720",,,,0,,true
+"Hometown Hardware Co","19 Main St, Dubuque, IA 52001",,,,0,enrichment:mock://enrichment/hometown-hardware,true
+"Evergreen Tree Care","507 Cedar Hollow, Spokane, WA 99201",,,,0,,true
+"Liberty Sign & Awning","1290 Freedom Blvd, Allen, TX 75002",,,,0,,true
+"Crescent Moon Cafe","73 Bourbon Walk, Lafayette, LA 70501",,,,0,,true

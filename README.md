@@ -13,6 +13,47 @@ Everything is in [`challenge/PROBLEM.md`](challenge/PROBLEM.md). It has two **ga
 
 Dataset: [`challenge/data/companies.csv`](challenge/data/companies.csv).
 
+## Stage B minimal slice
+
+This repo includes a small Laravel command for the Contact Finder Stage B slice.
+It reads the sample CSV, resolves candidates only from
+[`challenge/mocks/enrichment_responses.json`](challenge/mocks/enrichment_responses.json),
+and writes one output row per input company.
+
+Run it with:
+
+```bash
+php artisan contact-finder:run
+```
+
+By default, the output is written to:
+
+```text
+challenge/output/contact_finder_results.csv
+```
+
+The command also accepts explicit paths:
+
+```bash
+php artisan contact-finder:run \
+  --companies=challenge/data/companies.csv \
+  --mocks=challenge/mocks/enrichment_responses.json \
+  --output=challenge/output/contact_finder_results.csv
+```
+
+Confidence is deterministic and explainable: exact mock company matches,
+payment-relevant roles, complete business contact methods, independent provider
+agreement, matching names/phones, and provider confidence can raise the score.
+Generic contacts, missing names or roles, conflicts, weak single-source
+enrichment, missing contact methods, and listing-plus-weak-enrichment rows with
+no registry support reduce it. The threshold is 70: scores below 70 keep
+`contact_email_or_phone` empty and set `needs_human_review=true`. Scores can
+only reach 100 when all three independent mock sources are present; one- and
+two-source matches are capped below absolute certainty.
+
+Only the mocked providers in `challenge/mocks/` are used. The slice does not
+call real APIs, scrape websites, or invent contact data.
+
 ## How to submit
 - Your own repo (private is fine — add `wwwidr` as a collaborator), with `PLAN.md` committed **first** (git timestamps are part of the signal), then your slice.
 - **REQUIRED — a 2-3 minute screen recording** (Loom or similar, no webcam needed) showing you STARTING a fresh task from your very first click: *"find 10 companies that would want AgentCollect and why."* Talk through what you do as you go, and say in one line what AgentCollect does. We watch HOW you start, not the finished result. No video = we can't book a live conversation.
