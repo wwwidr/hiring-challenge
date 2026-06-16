@@ -29,3 +29,6 @@ If I have a mistake for code,I always changing code block. My code blocks usuall
 ## Anything you'd improve about THIS challenge or our CLAUDE.md
 <!-- Optional but a strong signal. -->
 The challenge is good because the data is dirty, just like real life. It would be better if we had a clear JSON schema at the start. This would help us understand the data structure faster.
+
+## Submission Video
+https://www.loom.com/share/846af77171b14444a97a111791cd022d 
