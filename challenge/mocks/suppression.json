@@ -1,0 +1,6 @@
+{
+  "_comment": "Mock suppression / opt-out list. In production this is fed by opt-out requests and is checked BEFORE any contact is emitted (a compliance gate in the debt-collection context). Company-wide entries surface the row flagged-but-blanked (audit trail); email/phone entries blank just the matching contact. Phone matching is normalization-insensitive (see the differently-formatted Sunbelt number). Lakeside is a below-threshold record: suppression records WHY a contact is withheld, distinct from low confidence.",
+  "companies": ["Pioneer Landscaping Inc"],
+  "emails": ["jeff@lakesideglass.net"],
+  "phones": ["480.555.0133"]
+}
