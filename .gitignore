@@ -18,3 +18,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+challenge/output/
