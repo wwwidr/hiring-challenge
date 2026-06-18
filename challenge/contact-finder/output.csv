@@ -1,0 +1,31 @@
+company_name,mailing_address,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review,review_reason
+Cedar Ridge Plumbing LLC,"4821 Maple Ave, Lincoln, NE 68504",Daniel Ortega,Owner,d.ortega@cedarridgeplumbing.com,98,mock://registry/ne/cedar-ridge-plumbing|mock://listing/cedar-ridge-plumbing|mock://enrichment/cedar-ridge-plumbing,false,Selected contact is supported by provider evidence
+Bayview Auto Repair,"129 Harbor St, Tacoma, WA 98402",Karen Liu,Owner,karen@bayviewauto.com,84,mock://registry/wa/bayview-auto-repair|mock://enrichment/bayview-auto-repair,false,Selected contact is supported by provider evidence
+Sunbelt Roofing Co,"7714 Desert Bloom Rd, Mesa, AZ 85207",,,,66,mock://listing/sunbelt-roofing|mock://enrichment/sunbelt-roofing,true,generic low-confidence contact
+Riverside Print & Sign,"302 W 3rd St, Davenport, IA 52801",,,,41,mock://enrichment/riverside-print-sign,true,single-source candidate; generic low-confidence contact
+Magnolia Family Dental,"1188 Peachtree Ln, Macon, GA 31201",,,,62,mock://listing/magnolia-family-dental,true,single-source candidate
+Northgate HVAC Services,"56 Industrial Pkwy, Akron, OH 44310",,,,47,mock://registry/oh/northgate-hvac,true,missing contact detail; single-source candidate; registered agent is not payment-relevant enough
+Pioneer Landscaping Inc,"940 Prairie View Dr, Boise, ID 83704",Maria Gomez,President,maria@pioneerlandscaping.com,99,mock://registry/id/pioneer-landscaping|mock://listing/pioneer-landscaping|mock://enrichment/pioneer-landscaping,false,Selected contact is supported by provider evidence
+Harbor Light Electric,"22 Dockside Ave, New Bedford, MA 02740",,,,65,mock://registry/ma/harbor-light-electric|mock://listing/harbor-light-electric,true,conflicting contact names
+Summit Pest Control,"6310 Highland Blvd, Reno, NV 89506",,,,38,mock://enrichment/summit-pest-control,true,single-source candidate; generic low-confidence contact
+Greenfield Catering Group,"415 Orchard St, Springfield, MO 65806",Angela Brooks,Owner,a.brooks@greenfieldcater.com,82,mock://registry/mo/greenfield-catering|mock://enrichment/greenfield-catering,false,Selected contact is supported by provider evidence
+Lakeside Auto Glass,"88 Lakeshore Dr, Madison, WI 53703",,,,66,mock://listing/lakeside-auto-glass|mock://enrichment/lakeside-auto-glass,true,confidence below threshold
+Ironclad Welding Shop,"1701 Foundry Rd, Pittsburgh, PA 15201",Robert Kowalski,Owner,bob@ironcladweld.com,97,mock://registry/pa/ironclad-welding|mock://listing/ironclad-welding|mock://enrichment/ironclad-welding,false,Selected contact is supported by provider evidence
+Coastal Breeze Pool Service,"233 Seagrape Way, Sarasota, FL 34236",,,,65,mock://registry/fl/coastal-breeze-pool|mock://listing/coastal-breeze-pool,true,conflicting contact names
+Redwood Cabinetry,"509 Timber Ct, Eugene, OR 97401",,,,0,,true,No provider returned a candidate
+Anchor Marine Supply,"17 Wharf St, Portland, ME 04101",,,,56,mock://enrichment/anchor-marine,true,single-source candidate; generic low-confidence contact
+Desert Sky Solar,"4400 Sunray Dr, Tucson, AZ 85706",,,,0,,true,No provider returned a candidate
+Brookside Veterinary Clinic,"760 Willow Bend, Chattanooga, TN 37402",Dr. Emily Hart,Owner,emily.hart@brooksidevet.com,98,mock://registry/tn/brookside-vet|mock://listing/brookside-vet|mock://enrichment/brookside-vet,false,Selected contact is supported by provider evidence
+Cornerstone Masonry,"311 Brickyard Ln, Wichita, KS 67202",,,,0,,true,No provider returned a candidate
+Velvet Thread Tailoring,"55 Garment Row, Allentown, PA 18101",,,,0,,true,No provider returned a candidate
+Frontier Towing & Recovery,"9201 Range Rd, Cheyenne, WY 82001",,,,0,,true,No provider returned a candidate
+Blue Heron Landscaping,"144 Marsh View Dr, Charleston, SC 29401",,,,0,,true,No provider returned a candidate
+Ace Mobile Locksmith,"27 Keystone Ave, Toledo, OH 43604",,,,0,,true,No provider returned a candidate
+Maple Leaf Bakery,"612 Baker St, Burlington, VT 05401",,,,62,mock://listing/maple-leaf-bakery,true,single-source candidate
+Granite Peak Surveying,"800 Summit Rd, Helena, MT 59601",,,,0,,true,No provider returned a candidate
+Tidewater Plumbing & Heating,"45 Estuary Ln, Norfolk, VA 23510",George Whitfield,Owner,g.whitfield@tidewaterph.com,83,mock://registry/va/tidewater-plumbing|mock://enrichment/tidewater-plumbing,false,Selected contact is supported by provider evidence
+Sierra Vista Auto Body,"3320 Foothill Dr, Fresno, CA 93720",,,,0,,true,No provider returned a candidate
+Hometown Hardware Co,"19 Main St, Dubuque, IA 52001",,,,44,mock://enrichment/hometown-hardware,true,single-source candidate; generic low-confidence contact
+Evergreen Tree Care,"507 Cedar Hollow, Spokane, WA 99201",,,,0,,true,No provider returned a candidate
+Liberty Sign & Awning,"1290 Freedom Blvd, Allen, TX 75002",,,,0,,true,No provider returned a candidate
+Crescent Moon Cafe,"73 Bourbon Walk, Lafayette, LA 70501",,,,0,,true,No provider returned a candidate
