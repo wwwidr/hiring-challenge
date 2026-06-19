@@ -14,12 +14,21 @@ class NotifySequenceUpdate implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    
+    public const TERMINAL_STATUSES = ['cancelled', 'recovered'];
+
     public function __construct(public int $sequenceId) {}
 
     public function handle(): void
     {
         $sequence = Sequence::findOrFail($this->sequenceId);
-
+        if(in_array($sequence->status,self::TERMINAL_STATUSES,true)){
+            Log::info('Skipping sequence update notification', [
+                'sequence_id' => $sequence->id,
+                'status' => $sequence->status,
+            ]);
+            return;
+        }
         // BUG: No status check here — should skip terminal sequences
         Log::info('Sending sequence update notification', [
             'sequence_id' => $sequence->id,
