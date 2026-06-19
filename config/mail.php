@@ -17,4 +17,6 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'noreply@respaid.com'),
         'name' => env('MAIL_FROM_NAME', 'Respaid'),
     ],
+
+    'payment_confirmation_recipient' => env('MAIL_PAYMENT_CONFIRMATION_RECIPIENT', ''),
 ];

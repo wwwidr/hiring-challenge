@@ -26,5 +26,6 @@
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="MAIL_MAILER" value="array"/>
+        <env name="MAIL_PAYMENT_CONFIRMATION_RECIPIENT" value="test@example.com"/>
     </php>
 </phpunit>
