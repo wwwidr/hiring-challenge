@@ -1,0 +1,19 @@
+company_name,contact_name,contact_role,contact_email,contact_phone,sources,agreement_score,authority_score,completeness_score,recency_score,confidence_score,verification_status,is_correct
+Cedar Ridge Plumbing LLC,Daniel Ortega,Owner,d.ortega@cedarridgeplumbing.com,+1-402-555-0148,"registry, listing, enrichment",1.0,0.90,1.0,0.5,91,verified,1
+Pioneer Landscaping Inc,Maria Gomez,President,maria@pioneerlandscaping.com,+1-208-555-0175,"registry, listing, enrichment",1.0,0.90,1.0,0.5,91,verified,1
+Ironclad Welding Shop,Robert Kowalski,Owner,bob@ironcladweld.com,+1-412-555-0184,"registry, listing, enrichment",1.0,0.90,1.0,0.5,91,verified,1
+Brookside Veterinary Clinic,Dr. Emily Hart,Owner,emily.hart@brooksidevet.com,+1-423-555-0109,"registry, listing, enrichment",1.0,0.90,1.0,0.5,91,verified,1
+Harbor Light Electric,Sean Murphy,Owner,,+1-508-555-0160,"registry, listing",1.0,0.90,0.67,0.5,91,verified,1
+Bayview Auto Repair,Karen Liu,Owner,karen@bayviewauto.com,+1-253-555-0192,"registry, enrichment",0.5,0.90,1.0,0.5,71,unverified,1
+Greenfield Catering Group,Angela Brooks,Owner,a.brooks@greenfieldcater.com,+1-417-555-0151,"registry, enrichment",0.5,0.90,1.0,0.5,71,unverified,1
+Tidewater Plumbing & Heating,George Whitfield,Owner,g.whitfield@tidewaterph.com,+1-757-555-0167,"registry, enrichment",0.5,0.90,1.0,0.5,71,unverified,1
+Northgate HVAC Services,Thomas Reed,Registered Agent,,,registry,0.5,0.90,0.67,0.5,62,unverified,0
+Lakeside Auto Glass,Jeff,,jeff@lakesideglass.net,+1-608-555-0129,"listing, enrichment",0.5,0.70,0.67,0.5,58,unverified,0
+Magnolia Family Dental,Dr. Patel,,,+1-478-555-0117,listing,0.5,0.50,0.67,0.5,54,unverified,0
+Coastal Breeze Pool Service,Tina Alvarez,Manager,,+1-941-555-0146,"registry, listing",0.0,0.90,0.67,0.5,51,conflicting,0
+Sunbelt Roofing Co,,,office@sunbeltroofingaz.com,+1-480-555-0133,"listing, enrichment",0.0,0.70,0.33,0.5,30,unverified,0
+Anchor Marine Supply,,,sales@anchormarine.co,+1-207-555-0138,enrichment,0.0,0.70,0.33,0.5,30,unverified,0
+Maple Leaf Bakery,,,,+1-802-555-0121,listing,0.0,0.50,0.33,0.5,26,unverified,0
+Riverside Print & Sign,,,info@riversideprint.biz,,enrichment,0.0,0.70,0.0,0.5,22,unverified,0
+Summit Pest Control,,,contact@summitpest.io,,enrichment,0.0,0.70,0.0,0.5,22,unverified,0
+Hometown Hardware Co,,,info@hometownhardware.com,,enrichment,0.0,0.70,0.0,0.5,22,unverified,0
