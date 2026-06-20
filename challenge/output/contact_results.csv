@@ -1,0 +1,31 @@
+company_name,mailing_address,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review
+Cedar Ridge Plumbing LLC,"4821 Maple Ave, Lincoln, NE 68504",Daniel Ortega,owner,d.ortega@cedarridgeplumbing.com,91,registry|listing|enrichment,false
+Bayview Auto Repair,"129 Harbor St, Tacoma, WA 98402",Karen Liu,owner,karen@bayviewauto.com,76,registry|enrichment,false
+Sunbelt Roofing Co,"7714 Desert Bloom Rd, Mesa, AZ 85207",Unknown,other,,36,listing|enrichment,true
+Riverside Print & Sign,"302 W 3rd St, Davenport, IA 52801",Unknown,other,,0,enrichment,true
+Magnolia Family Dental,"1188 Peachtree Ln, Macon, GA 31201",Dr. Patel,other,,17,listing,true
+Northgate HVAC Services,"56 Industrial Pkwy, Akron, OH 44310",Thomas Reed,other,,1,registry,true
+Pioneer Landscaping Inc,"940 Prairie View Dr, Boise, ID 83704",Maria Gomez,owner,maria@pioneerlandscaping.com,95,registry|listing|enrichment,false
+Harbor Light Electric,"22 Dockside Ave, New Bedford, MA 02740",Sean Murphy,owner,,64,registry|listing,true
+Summit Pest Control,"6310 Highland Blvd, Reno, NV 89506",Unknown,other,,0,enrichment,true
+Greenfield Catering Group,"415 Orchard St, Springfield, MO 65806",Angela Brooks,owner,a.brooks@greenfieldcater.com,75,registry|enrichment,false
+Lakeside Auto Glass,"88 Lakeshore Dr, Madison, WI 53703",Jeff (manager),office_manager,,55,listing|enrichment,true
+Ironclad Welding Shop,"1701 Foundry Rd, Pittsburgh, PA 15201",Robert Kowalski,owner,bob@ironcladweld.com,83,registry|listing|enrichment,false
+Coastal Breeze Pool Service,"233 Seagrape Way, Sarasota, FL 34236",Tina Alvarez,office_manager,,56,registry|listing,true
+Redwood Cabinetry,"509 Timber Ct, Eugene, OR 97401",,,,0,,true
+Anchor Marine Supply,"17 Wharf St, Portland, ME 04101",Unknown,other,,0,enrichment,true
+Desert Sky Solar,"4400 Sunray Dr, Tucson, AZ 85706",,,,0,,true
+Brookside Veterinary Clinic,"760 Willow Bend, Chattanooga, TN 37402",Dr. Emily Hart,owner,emily.hart@brooksidevet.com,91,registry|listing|enrichment,false
+Cornerstone Masonry,"311 Brickyard Ln, Wichita, KS 67202",,,,0,,true
+Velvet Thread Tailoring,"55 Garment Row, Allentown, PA 18101",,,,0,,true
+Frontier Towing & Recovery,"9201 Range Rd, Cheyenne, WY 82001",,,,0,,true
+Blue Heron Landscaping,"144 Marsh View Dr, Charleston, SC 29401",,,,0,,true
+Ace Mobile Locksmith,"27 Keystone Ave, Toledo, OH 43604",,,,0,,true
+Maple Leaf Bakery,"612 Baker St, Burlington, VT 05401",,,,2,listing,true
+Granite Peak Surveying,"800 Summit Rd, Helena, MT 59601",,,,0,,true
+Tidewater Plumbing & Heating,"45 Estuary Ln, Norfolk, VA 23510",George Whitfield,owner,g.whitfield@tidewaterph.com,76,registry|enrichment,false
+Sierra Vista Auto Body,"3320 Foothill Dr, Fresno, CA 93720",,,,0,,true
+Hometown Hardware Co,"19 Main St, Dubuque, IA 52001",Unknown,other,,0,enrichment,true
+Evergreen Tree Care,"507 Cedar Hollow, Spokane, WA 99201",,,,0,,true
+Liberty Sign & Awning,"1290 Freedom Blvd, Allen, TX 75002",,,,0,,true
+Crescent Moon Cafe,"73 Bourbon Walk, Lafayette, LA 70501",,,,0,,true

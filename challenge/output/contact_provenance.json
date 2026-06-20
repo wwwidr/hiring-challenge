@@ -1,0 +1,413 @@
+{
+  "Cedar Ridge Plumbing LLC": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 22,
+      "contact": 22,
+      "corroboration": 17,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/ne/cedar-ridge-plumbing",
+      "listing": "mock://listing/cedar-ridge-plumbing",
+      "enrichment": "mock://enrichment/cedar-ridge-plumbing"
+    },
+    "selected_contact": "d.ortega@cedarridgeplumbing.com",
+    "selected_role": "owner"
+  },
+  "Bayview Auto Repair": {
+    "score_breakdown": {
+      "identity": 25,
+      "role": 22,
+      "contact": 21,
+      "corroboration": 8,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/wa/bayview-auto-repair",
+      "enrichment": "mock://enrichment/bayview-auto-repair"
+    },
+    "selected_contact": "karen@bayviewauto.com",
+    "selected_role": "owner"
+  },
+  "Sunbelt Roofing Co": {
+    "score_breakdown": {
+      "identity": 15,
+      "role": 0,
+      "contact": 19,
+      "corroboration": 13,
+      "penalties": 11
+    },
+    "source_urls": {
+      "listing": "mock://listing/sunbelt-roofing",
+      "enrichment": "mock://enrichment/sunbelt-roofing"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Riverside Print & Sign": {
+    "score_breakdown": {
+      "identity": 5,
+      "role": 0,
+      "contact": 16,
+      "corroboration": 0,
+      "penalties": 36
+    },
+    "source_urls": {
+      "enrichment": "mock://enrichment/riverside-print-sign"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Magnolia Family Dental": {
+    "score_breakdown": {
+      "identity": 10,
+      "role": 10,
+      "contact": 12,
+      "corroboration": 0,
+      "penalties": 15
+    },
+    "source_urls": {
+      "listing": "mock://listing/magnolia-family-dental"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Northgate HVAC Services": {
+    "score_breakdown": {
+      "identity": 20,
+      "role": 8,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 27
+    },
+    "source_urls": {
+      "registry": "mock://registry/oh/northgate-hvac"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Pioneer Landscaping Inc": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 22,
+      "contact": 23,
+      "corroboration": 20,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/id/pioneer-landscaping",
+      "listing": "mock://listing/pioneer-landscaping",
+      "enrichment": "mock://enrichment/pioneer-landscaping"
+    },
+    "selected_contact": "maria@pioneerlandscaping.com",
+    "selected_role": "owner"
+  },
+  "Harbor Light Electric": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 22,
+      "contact": 12,
+      "corroboration": 8,
+      "penalties": 8
+    },
+    "source_urls": {
+      "registry": "mock://registry/ma/harbor-light-electric",
+      "listing": "mock://listing/harbor-light-electric"
+    },
+    "selected_contact": "",
+    "selected_role": "owner"
+  },
+  "Summit Pest Control": {
+    "score_breakdown": {
+      "identity": 5,
+      "role": 0,
+      "contact": 15,
+      "corroboration": 0,
+      "penalties": 36
+    },
+    "source_urls": {
+      "enrichment": "mock://enrichment/summit-pest-control"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Greenfield Catering Group": {
+    "score_breakdown": {
+      "identity": 25,
+      "role": 22,
+      "contact": 20,
+      "corroboration": 8,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/mo/greenfield-catering",
+      "enrichment": "mock://enrichment/greenfield-catering"
+    },
+    "selected_contact": "a.brooks@greenfieldcater.com",
+    "selected_role": "owner"
+  },
+  "Lakeside Auto Glass": {
+    "score_breakdown": {
+      "identity": 15,
+      "role": 14,
+      "contact": 18,
+      "corroboration": 8,
+      "penalties": 0
+    },
+    "source_urls": {
+      "listing": "mock://listing/lakeside-auto-glass",
+      "enrichment": "mock://enrichment/lakeside-auto-glass"
+    },
+    "selected_contact": "",
+    "selected_role": "office_manager"
+  },
+  "Ironclad Welding Shop": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 22,
+      "contact": 22,
+      "corroboration": 17,
+      "penalties": 8
+    },
+    "source_urls": {
+      "registry": "mock://registry/pa/ironclad-welding",
+      "listing": "mock://listing/ironclad-welding",
+      "enrichment": "mock://enrichment/ironclad-welding"
+    },
+    "selected_contact": "bob@ironcladweld.com",
+    "selected_role": "owner"
+  },
+  "Coastal Breeze Pool Service": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 14,
+      "contact": 12,
+      "corroboration": 8,
+      "penalties": 8
+    },
+    "source_urls": {
+      "registry": "mock://registry/fl/coastal-breeze-pool",
+      "listing": "mock://listing/coastal-breeze-pool"
+    },
+    "selected_contact": "",
+    "selected_role": "office_manager"
+  },
+  "Redwood Cabinetry": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Anchor Marine Supply": {
+    "score_breakdown": {
+      "identity": 5,
+      "role": 0,
+      "contact": 19,
+      "corroboration": 0,
+      "penalties": 26
+    },
+    "source_urls": {
+      "enrichment": "mock://enrichment/anchor-marine"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Desert Sky Solar": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Brookside Veterinary Clinic": {
+    "score_breakdown": {
+      "identity": 30,
+      "role": 22,
+      "contact": 22,
+      "corroboration": 17,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/tn/brookside-vet",
+      "listing": "mock://listing/brookside-vet",
+      "enrichment": "mock://enrichment/brookside-vet"
+    },
+    "selected_contact": "emily.hart@brooksidevet.com",
+    "selected_role": "owner"
+  },
+  "Cornerstone Masonry": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Velvet Thread Tailoring": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Frontier Towing & Recovery": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Blue Heron Landscaping": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Ace Mobile Locksmith": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Maple Leaf Bakery": {
+    "score_breakdown": {
+      "identity": 10,
+      "role": 0,
+      "contact": 12,
+      "corroboration": 0,
+      "penalties": 20
+    },
+    "source_urls": {
+      "listing": "mock://listing/maple-leaf-bakery"
+    },
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Granite Peak Surveying": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Tidewater Plumbing & Heating": {
+    "score_breakdown": {
+      "identity": 25,
+      "role": 22,
+      "contact": 21,
+      "corroboration": 8,
+      "penalties": 0
+    },
+    "source_urls": {
+      "registry": "mock://registry/va/tidewater-plumbing",
+      "enrichment": "mock://enrichment/tidewater-plumbing"
+    },
+    "selected_contact": "g.whitfield@tidewaterph.com",
+    "selected_role": "owner"
+  },
+  "Sierra Vista Auto Body": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Hometown Hardware Co": {
+    "score_breakdown": {
+      "identity": 5,
+      "role": 0,
+      "contact": 16,
+      "corroboration": 0,
+      "penalties": 36
+    },
+    "source_urls": {
+      "enrichment": "mock://enrichment/hometown-hardware"
+    },
+    "selected_contact": "",
+    "selected_role": "other"
+  },
+  "Evergreen Tree Care": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Liberty Sign & Awning": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  },
+  "Crescent Moon Cafe": {
+    "score_breakdown": {
+      "identity": 0,
+      "role": 0,
+      "contact": 0,
+      "corroboration": 0,
+      "penalties": 5
+    },
+    "source_urls": {},
+    "selected_contact": "",
+    "selected_role": null
+  }
+}
