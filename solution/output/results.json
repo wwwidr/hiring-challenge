@@ -1,0 +1,630 @@
+[
+  {
+    "company_name": "Cedar Ridge Plumbing LLC",
+    "contact_name": "Daniel Ortega",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "d.ortega@cedarridgeplumbing.com",
+    "confidence_score": 100,
+    "source": "registry (mock://registry/ne/cedar-ridge-plumbing), listing (mock://listing/cedar-ridge-plumbing), enrichment (mock://enrichment/cedar-ridge-plumbing)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/ne/cedar-ridge-plumbing",
+        "data": {
+          "name": "Daniel Ortega",
+          "role": "Owner",
+          "source_url": "mock://registry/ne/cedar-ridge-plumbing"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/cedar-ridge-plumbing",
+        "data": {
+          "name": "Daniel Ortega",
+          "phone": "+1-402-555-0148",
+          "source_url": "mock://listing/cedar-ridge-plumbing"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/cedar-ridge-plumbing",
+        "data": {
+          "email": "d.ortega@cedarridgeplumbing.com",
+          "phone": null,
+          "provider_confidence": 84,
+          "source_url": "mock://enrichment/cedar-ridge-plumbing"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Bayview Auto Repair",
+    "contact_name": "Karen Liu",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "karen@bayviewauto.com",
+    "confidence_score": 87,
+    "source": "registry (mock://registry/wa/bayview-auto-repair), enrichment (mock://enrichment/bayview-auto-repair)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/wa/bayview-auto-repair",
+        "data": {
+          "name": "Karen Liu",
+          "role": "Owner",
+          "source_url": "mock://registry/wa/bayview-auto-repair"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/bayview-auto-repair",
+        "data": {
+          "email": "karen@bayviewauto.com",
+          "phone": "+1-253-555-0192",
+          "provider_confidence": 78,
+          "source_url": "mock://enrichment/bayview-auto-repair"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Sunbelt Roofing Co",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 55,
+    "source": "listing (mock://listing/sunbelt-roofing), enrichment (mock://enrichment/sunbelt-roofing)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/sunbelt-roofing",
+        "data": {
+          "name": null,
+          "phone": "+1-480-555-0133",
+          "source_url": "mock://listing/sunbelt-roofing"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/sunbelt-roofing",
+        "data": {
+          "email": "office@sunbeltroofingaz.com",
+          "phone": "+1-480-555-0133",
+          "provider_confidence": 66,
+          "source_url": "mock://enrichment/sunbelt-roofing"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Riverside Print & Sign",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 36,
+    "source": "enrichment (mock://enrichment/riverside-print-sign)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/riverside-print-sign",
+        "data": {
+          "email": "info@riversideprint.biz",
+          "phone": null,
+          "provider_confidence": 41,
+          "source_url": "mock://enrichment/riverside-print-sign"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Magnolia Family Dental",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 45,
+    "source": "listing (mock://listing/magnolia-family-dental)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/magnolia-family-dental",
+        "data": {
+          "name": "Dr. Patel",
+          "phone": "+1-478-555-0117",
+          "source_url": "mock://listing/magnolia-family-dental"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Northgate HVAC Services",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 35,
+    "source": "registry (mock://registry/oh/northgate-hvac)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/oh/northgate-hvac",
+        "data": {
+          "name": "Thomas Reed",
+          "role": "Registered Agent",
+          "source_url": "mock://registry/oh/northgate-hvac"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Pioneer Landscaping Inc",
+    "contact_name": "Maria Gomez",
+    "contact_role": "President",
+    "contact_email_or_phone": "maria@pioneerlandscaping.com",
+    "confidence_score": 100,
+    "source": "registry (mock://registry/id/pioneer-landscaping), listing (mock://listing/pioneer-landscaping), enrichment (mock://enrichment/pioneer-landscaping)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/id/pioneer-landscaping",
+        "data": {
+          "name": "Maria Gomez",
+          "role": "President",
+          "source_url": "mock://registry/id/pioneer-landscaping"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/pioneer-landscaping",
+        "data": {
+          "name": "Maria Gomez",
+          "phone": "+1-208-555-0175",
+          "source_url": "mock://listing/pioneer-landscaping"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/pioneer-landscaping",
+        "data": {
+          "email": "maria@pioneerlandscaping.com",
+          "phone": "+1-208-555-0175",
+          "provider_confidence": 88,
+          "source_url": "mock://enrichment/pioneer-landscaping"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Harbor Light Electric",
+    "contact_name": "Sean Murphy",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "+1-508-555-0160",
+    "confidence_score": 90,
+    "source": "registry (mock://registry/ma/harbor-light-electric), listing (mock://listing/harbor-light-electric)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/ma/harbor-light-electric",
+        "data": {
+          "name": "Sean Murphy",
+          "role": "Owner",
+          "source_url": "mock://registry/ma/harbor-light-electric"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/harbor-light-electric",
+        "data": {
+          "name": "S. Murphy",
+          "phone": "+1-508-555-0160",
+          "source_url": "mock://listing/harbor-light-electric"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Summit Pest Control",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 36,
+    "source": "enrichment (mock://enrichment/summit-pest-control)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/summit-pest-control",
+        "data": {
+          "email": "contact@summitpest.io",
+          "phone": null,
+          "provider_confidence": 38,
+          "source_url": "mock://enrichment/summit-pest-control"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Greenfield Catering Group",
+    "contact_name": "Angela Brooks",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "a.brooks@greenfieldcater.com",
+    "confidence_score": 86,
+    "source": "registry (mock://registry/mo/greenfield-catering), enrichment (mock://enrichment/greenfield-catering)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/mo/greenfield-catering",
+        "data": {
+          "name": "Angela Brooks",
+          "role": "Owner",
+          "source_url": "mock://registry/mo/greenfield-catering"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/greenfield-catering",
+        "data": {
+          "email": "a.brooks@greenfieldcater.com",
+          "phone": "+1-417-555-0151",
+          "provider_confidence": 72,
+          "source_url": "mock://enrichment/greenfield-catering"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Lakeside Auto Glass",
+    "contact_name": "Jeff (manager)",
+    "contact_role": "",
+    "contact_email_or_phone": "jeff@lakesideglass.net",
+    "confidence_score": 74,
+    "source": "listing (mock://listing/lakeside-auto-glass), enrichment (mock://enrichment/lakeside-auto-glass)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/lakeside-auto-glass",
+        "data": {
+          "name": "Jeff (manager)",
+          "phone": "+1-608-555-0129",
+          "source_url": "mock://listing/lakeside-auto-glass"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/lakeside-auto-glass",
+        "data": {
+          "email": "jeff@lakesideglass.net",
+          "phone": null,
+          "provider_confidence": 58,
+          "source_url": "mock://enrichment/lakeside-auto-glass"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Ironclad Welding Shop",
+    "contact_name": "Robert Kowalski",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "bob@ironcladweld.com",
+    "confidence_score": 100,
+    "source": "registry (mock://registry/pa/ironclad-welding), listing (mock://listing/ironclad-welding), enrichment (mock://enrichment/ironclad-welding)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/pa/ironclad-welding",
+        "data": {
+          "name": "Robert Kowalski",
+          "role": "Owner",
+          "source_url": "mock://registry/pa/ironclad-welding"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/ironclad-welding",
+        "data": {
+          "name": "Bob Kowalski",
+          "phone": "+1-412-555-0184",
+          "source_url": "mock://listing/ironclad-welding"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/ironclad-welding",
+        "data": {
+          "email": "bob@ironcladweld.com",
+          "phone": "+1-412-555-0184",
+          "provider_confidence": 81,
+          "source_url": "mock://enrichment/ironclad-welding"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Coastal Breeze Pool Service",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 65,
+    "source": "registry (mock://registry/fl/coastal-breeze-pool), listing (mock://listing/coastal-breeze-pool)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/fl/coastal-breeze-pool",
+        "data": {
+          "name": "Tina Alvarez",
+          "role": "Manager",
+          "source_url": "mock://registry/fl/coastal-breeze-pool"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/coastal-breeze-pool",
+        "data": {
+          "name": "Marcus Webb",
+          "phone": "+1-941-555-0146",
+          "source_url": "mock://listing/coastal-breeze-pool"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Redwood Cabinetry",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Anchor Marine Supply",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 39,
+    "source": "enrichment (mock://enrichment/anchor-marine)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/anchor-marine",
+        "data": {
+          "email": "sales@anchormarine.co",
+          "phone": "+1-207-555-0138",
+          "provider_confidence": 63,
+          "source_url": "mock://enrichment/anchor-marine"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Desert Sky Solar",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Brookside Veterinary Clinic",
+    "contact_name": "Dr. Emily Hart",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "emily.hart@brooksidevet.com",
+    "confidence_score": 100,
+    "source": "registry (mock://registry/tn/brookside-vet), listing (mock://listing/brookside-vet), enrichment (mock://enrichment/brookside-vet)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/tn/brookside-vet",
+        "data": {
+          "name": "Dr. Emily Hart",
+          "role": "Owner",
+          "source_url": "mock://registry/tn/brookside-vet"
+        }
+      },
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/brookside-vet",
+        "data": {
+          "name": "Dr. Emily Hart",
+          "phone": "+1-423-555-0109",
+          "source_url": "mock://listing/brookside-vet"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/brookside-vet",
+        "data": {
+          "email": "emily.hart@brooksidevet.com",
+          "phone": null,
+          "provider_confidence": 86,
+          "source_url": "mock://enrichment/brookside-vet"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Cornerstone Masonry",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Velvet Thread Tailoring",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Frontier Towing & Recovery",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Blue Heron Landscaping",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Ace Mobile Locksmith",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Maple Leaf Bakery",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 30,
+    "source": "listing (mock://listing/maple-leaf-bakery)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "listing",
+        "source_url": "mock://listing/maple-leaf-bakery",
+        "data": {
+          "name": null,
+          "phone": "+1-802-555-0121",
+          "source_url": "mock://listing/maple-leaf-bakery"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Granite Peak Surveying",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Tidewater Plumbing & Heating",
+    "contact_name": "George Whitfield",
+    "contact_role": "Owner",
+    "contact_email_or_phone": "g.whitfield@tidewaterph.com",
+    "confidence_score": 86,
+    "source": "registry (mock://registry/va/tidewater-plumbing), enrichment (mock://enrichment/tidewater-plumbing)",
+    "needs_human_review": false,
+    "provenance": [
+      {
+        "provider": "registry",
+        "source_url": "mock://registry/va/tidewater-plumbing",
+        "data": {
+          "name": "George Whitfield",
+          "role": "Owner",
+          "source_url": "mock://registry/va/tidewater-plumbing"
+        }
+      },
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/tidewater-plumbing",
+        "data": {
+          "email": "g.whitfield@tidewaterph.com",
+          "phone": "+1-757-555-0167",
+          "provider_confidence": 76,
+          "source_url": "mock://enrichment/tidewater-plumbing"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Sierra Vista Auto Body",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Hometown Hardware Co",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 37,
+    "source": "enrichment (mock://enrichment/hometown-hardware)",
+    "needs_human_review": true,
+    "provenance": [
+      {
+        "provider": "enrichment",
+        "source_url": "mock://enrichment/hometown-hardware",
+        "data": {
+          "email": "info@hometownhardware.com",
+          "phone": null,
+          "provider_confidence": 44,
+          "source_url": "mock://enrichment/hometown-hardware"
+        }
+      }
+    ]
+  },
+  {
+    "company_name": "Evergreen Tree Care",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Liberty Sign & Awning",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  },
+  {
+    "company_name": "Crescent Moon Cafe",
+    "contact_name": "",
+    "contact_role": "",
+    "contact_email_or_phone": "",
+    "confidence_score": 0,
+    "source": "none",
+    "needs_human_review": true,
+    "provenance": []
+  }
+]
