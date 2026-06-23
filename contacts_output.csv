@@ -1,0 +1,31 @@
+company_name,contact_name,contact_role,contact_email_or_phone,confidence_score,source,needs_human_review,cannot_verify_reason
+Cedar Ridge Plumbing LLC,Daniel Ortega,Owner,d.ortega@cedarridgeplumbing.com,90,mock://registry/ne/cedar-ridge-plumbing | mock://listing/cedar-ridge-plumbing | mock://enrichment/cedar-ridge-plumbing,False,
+Bayview Auto Repair,Karen Liu,Owner,karen@bayviewauto.com,75,mock://registry/wa/bayview-auto-repair | mock://enrichment/bayview-auto-repair,False,
+Sunbelt Roofing Co,,,,10,mock://listing/sunbelt-roofing | mock://enrichment/sunbelt-roofing,True,confidence below threshold
+Riverside Print & Sign,,,,0,mock://enrichment/riverside-print-sign,True,confidence below threshold
+Magnolia Family Dental,Dr. Patel,,,25,mock://listing/magnolia-family-dental,True,confidence below threshold
+Northgate HVAC Services,Thomas Reed,Registered Agent,,30,mock://registry/oh/northgate-hvac,True,confidence below threshold
+Pioneer Landscaping Inc,Maria Gomez,President,maria@pioneerlandscaping.com,90,mock://registry/id/pioneer-landscaping | mock://listing/pioneer-landscaping | mock://enrichment/pioneer-landscaping,False,
+Harbor Light Electric,Sean Murphy,Owner,+1-508-555-0160,75,mock://registry/ma/harbor-light-electric | mock://listing/harbor-light-electric,False,
+Summit Pest Control,,,,0,mock://enrichment/summit-pest-control,True,confidence below threshold
+Greenfield Catering Group,Angela Brooks,Owner,a.brooks@greenfieldcater.com,75,mock://registry/mo/greenfield-catering | mock://enrichment/greenfield-catering,False,
+Lakeside Auto Glass,Jeff (manager),,,5,mock://listing/lakeside-auto-glass | mock://enrichment/lakeside-auto-glass,True,confidence below threshold
+Ironclad Welding Shop,Robert Kowalski,Owner,,40,mock://registry/pa/ironclad-welding | mock://listing/ironclad-welding | mock://enrichment/ironclad-welding,True,confidence below threshold
+Coastal Breeze Pool Service,Tina Alvarez,Manager,,40,mock://registry/fl/coastal-breeze-pool | mock://listing/coastal-breeze-pool,True,confidence below threshold
+Redwood Cabinetry,,,,0,,True,no results from any provider
+Anchor Marine Supply,,,,0,mock://enrichment/anchor-marine,True,confidence below threshold
+Desert Sky Solar,,,,0,,True,no results from any provider
+Brookside Veterinary Clinic,Dr. Emily Hart,Owner,emily.hart@brooksidevet.com,90,mock://registry/tn/brookside-vet | mock://listing/brookside-vet | mock://enrichment/brookside-vet,False,
+Cornerstone Masonry,,,,0,,True,no results from any provider
+Velvet Thread Tailoring,,,,0,,True,no results from any provider
+Frontier Towing & Recovery,,,,0,,True,no results from any provider
+Blue Heron Landscaping,,,,0,,True,no results from any provider
+Ace Mobile Locksmith,,,,0,,True,no results from any provider
+Maple Leaf Bakery,,,,0,mock://listing/maple-leaf-bakery,True,confidence below threshold
+Granite Peak Surveying,,,,0,,True,no results from any provider
+Tidewater Plumbing & Heating,George Whitfield,Owner,g.whitfield@tidewaterph.com,75,mock://registry/va/tidewater-plumbing | mock://enrichment/tidewater-plumbing,False,
+Sierra Vista Auto Body,,,,0,,True,no results from any provider
+Hometown Hardware Co,,,,0,mock://enrichment/hometown-hardware,True,confidence below threshold
+Evergreen Tree Care,,,,0,,True,no results from any provider
+Liberty Sign & Awning,,,,0,,True,no results from any provider
+Crescent Moon Cafe,,,,0,,True,no results from any provider
